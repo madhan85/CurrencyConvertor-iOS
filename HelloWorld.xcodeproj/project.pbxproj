@@ -14,12 +14,19 @@
 		CD0F61E615B7A9A6008E3E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F61E515B7A9A6008E3E2B /* main.m */; };
 		CD0F61EA15B7A9A6008E3E2B /* PCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F61E915B7A9A6008E3E2B /* PCAppDelegate.m */; };
 		CD0F61ED15B7A9A6008E3E2B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0F61EB15B7A9A6008E3E2B /* MainStoryboard.storyboard */; };
-		CD0F61F015B7A9A6008E3E2B /* PCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F61EF15B7A9A6008E3E2B /* PCViewController.m */; };
 		CD0F61F815B7A9A7008E3E2B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0F61F715B7A9A7008E3E2B /* SenTestingKit.framework */; };
 		CD0F61F915B7A9A7008E3E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0F61D915B7A9A6008E3E2B /* UIKit.framework */; };
 		CD0F61FA15B7A9A7008E3E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0F61DB15B7A9A6008E3E2B /* Foundation.framework */; };
 		CD0F620215B7A9A7008E3E2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD0F620015B7A9A7008E3E2B /* InfoPlist.strings */; };
 		CD0F620515B7A9A7008E3E2B /* HelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F620415B7A9A7008E3E2B /* HelloWorldTests.m */; };
+		CD0F621015B7B08E008E3E2B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F620F15B7B08E008E3E2B /* SecondViewController.m */; };
+		CD0F621115B7B08E008E3E2B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F620F15B7B08E008E3E2B /* SecondViewController.m */; };
+		CD74FE8F15BC650300DB9B6D /* hk.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD74FE8E15BC650300DB9B6D /* hk.gif */; };
+		CD785BBE15B99D9900416CAF /* PCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD785BBD15B99D9900416CAF /* PCViewController.m */; };
+		CD785BC115B99E5300416CAF /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD785BC015B99E5300416CAF /* ThirdViewController.m */; };
+		CD7AC56E15EA83AF00822459 /* usa.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD7AC56D15EA83AF00822459 /* usa.gif */; };
+		CDDCE4DD1607518A0067D9A3 /* PCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */; };
+		CDDCE4E6160760CA0067D9A3 /* PCXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCE4E5160760CA0067D9A3 /* PCXMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +44,31 @@
 		CD0F61D915B7A9A6008E3E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD0F61DB15B7A9A6008E3E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD0F61DD15B7A9A6008E3E2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CD0F61E115B7A9A6008E3E2B /* HelloWorld-Info.plist */ = {isa = PBXFileReference; path = "HelloWorld-Info.plist"; sourceTree = "<group>"; };
+		CD0F61E115B7A9A6008E3E2B /* HelloWorld-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloWorld-Info.plist"; sourceTree = "<group>"; };
 		CD0F61E315B7A9A6008E3E2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CD0F61E515B7A9A6008E3E2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CD0F61E715B7A9A6008E3E2B /* HelloWorld-Prefix.pch */ = {isa = PBXFileReference; path = "HelloWorld-Prefix.pch"; sourceTree = "<group>"; };
-		CD0F61E815B7A9A6008E3E2B /* PCAppDelegate.h */ = {isa = PBXFileReference; path = PCAppDelegate.h; sourceTree = "<group>"; };
+		CD0F61E715B7A9A6008E3E2B /* HelloWorld-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWorld-Prefix.pch"; sourceTree = "<group>"; };
+		CD0F61E815B7A9A6008E3E2B /* PCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCAppDelegate.h; sourceTree = "<group>"; };
 		CD0F61E915B7A9A6008E3E2B /* PCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCAppDelegate.m; sourceTree = "<group>"; };
 		CD0F61EC15B7A9A6008E3E2B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CD0F61EE15B7A9A6008E3E2B /* PCViewController.h */ = {isa = PBXFileReference; path = PCViewController.h; sourceTree = "<group>"; };
-		CD0F61EF15B7A9A6008E3E2B /* PCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCViewController.m; sourceTree = "<group>"; };
 		CD0F61F615B7A9A7008E3E2B /* HelloWorldTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0F61F715B7A9A7008E3E2B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		CD0F61FF15B7A9A7008E3E2B /* HelloWorldTests-Info.plist */ = {isa = PBXFileReference; path = "HelloWorldTests-Info.plist"; sourceTree = "<group>"; };
+		CD0F61FF15B7A9A7008E3E2B /* HelloWorldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloWorldTests-Info.plist"; sourceTree = "<group>"; };
 		CD0F620115B7A9A7008E3E2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CD0F620315B7A9A7008E3E2B /* HelloWorldTests.h */ = {isa = PBXFileReference; path = HelloWorldTests.h; sourceTree = "<group>"; };
+		CD0F620315B7A9A7008E3E2B /* HelloWorldTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldTests.h; sourceTree = "<group>"; };
 		CD0F620415B7A9A7008E3E2B /* HelloWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldTests.m; sourceTree = "<group>"; };
+		CD0F620E15B7B08E008E3E2B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = SOURCE_ROOT; };
+		CD0F620F15B7B08E008E3E2B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = SOURCE_ROOT; };
+		CD74FE8E15BC650300DB9B6D /* hk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hk.gif; sourceTree = "<group>"; };
+		CD785BBC15B99D9900416CAF /* PCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCViewController.h; sourceTree = "<group>"; };
+		CD785BBD15B99D9900416CAF /* PCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCViewController.m; sourceTree = "<group>"; };
+		CD785BBF15B99E5300416CAF /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		CD785BC015B99E5300416CAF /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		CD7AC56D15EA83AF00822459 /* usa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = usa.gif; sourceTree = "<group>"; };
+		CDDCE4DB1607518A0067D9A3 /* PCCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCurrency.h; sourceTree = "<group>"; };
+		CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCurrency.m; sourceTree = "<group>"; };
+		CDDCE4E4160760CA0067D9A3 /* PCXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCXMLParser.h; sourceTree = "<group>"; };
+		CDDCE4E5160760CA0067D9A3 /* PCXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCXMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +128,21 @@
 		CD0F61DF15B7A9A6008E3E2B /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				CD74FE8E15BC650300DB9B6D /* hk.gif */,
+				CD7AC56D15EA83AF00822459 /* usa.gif */,
 				CD0F61E815B7A9A6008E3E2B /* PCAppDelegate.h */,
 				CD0F61E915B7A9A6008E3E2B /* PCAppDelegate.m */,
 				CD0F61EB15B7A9A6008E3E2B /* MainStoryboard.storyboard */,
-				CD0F61EE15B7A9A6008E3E2B /* PCViewController.h */,
-				CD0F61EF15B7A9A6008E3E2B /* PCViewController.m */,
+				CD785BBF15B99E5300416CAF /* ThirdViewController.h */,
+				CD785BC015B99E5300416CAF /* ThirdViewController.m */,
+				CD785BBC15B99D9900416CAF /* PCViewController.h */,
+				CD785BBD15B99D9900416CAF /* PCViewController.m */,
+				CD0F620E15B7B08E008E3E2B /* SecondViewController.h */,
+				CD0F620F15B7B08E008E3E2B /* SecondViewController.m */,
+				CDDCE4DB1607518A0067D9A3 /* PCCurrency.h */,
+				CDDCE4E4160760CA0067D9A3 /* PCXMLParser.h */,
+				CDDCE4E5160760CA0067D9A3 /* PCXMLParser.m */,
+				CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */,
 				CD0F61E015B7A9A6008E3E2B /* Supporting Files */,
 			);
 			path = HelloWorld;
@@ -224,6 +251,8 @@
 			files = (
 				CD0F61E415B7A9A6008E3E2B /* InfoPlist.strings in Resources */,
 				CD0F61ED15B7A9A6008E3E2B /* MainStoryboard.storyboard in Resources */,
+				CD74FE8F15BC650300DB9B6D /* hk.gif in Resources */,
+				CD7AC56E15EA83AF00822459 /* usa.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +289,11 @@
 			files = (
 				CD0F61E615B7A9A6008E3E2B /* main.m in Sources */,
 				CD0F61EA15B7A9A6008E3E2B /* PCAppDelegate.m in Sources */,
-				CD0F61F015B7A9A6008E3E2B /* PCViewController.m in Sources */,
+				CD0F621015B7B08E008E3E2B /* SecondViewController.m in Sources */,
+				CD785BBE15B99D9900416CAF /* PCViewController.m in Sources */,
+				CD785BC115B99E5300416CAF /* ThirdViewController.m in Sources */,
+				CDDCE4DD1607518A0067D9A3 /* PCCurrency.m in Sources */,
+				CDDCE4E6160760CA0067D9A3 /* PCXMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0F620515B7A9A7008E3E2B /* HelloWorldTests.m in Sources */,
+				CD0F621115B7B08E008E3E2B /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +349,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -340,7 +374,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -358,6 +392,7 @@
 		CD0F620915B7A9A7008E3E2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
@@ -369,6 +404,7 @@
 		CD0F620A15B7A9A7008E3E2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
@@ -430,6 +466,7 @@
 				CD0F620A15B7A9A7008E3E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD0F620B15B7A9A7008E3E2B /* Build configuration list for PBXNativeTarget "HelloWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +475,7 @@
 				CD0F620D15B7A9A7008E3E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

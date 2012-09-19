@@ -1,5 +1,5 @@
 //
-//  PCViewController.h
+//  PCPickerView1.h
 //  HelloWorld
 //
 //  Created by Cheung Ka Fai on 20/7/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCViewController : UIViewController
--(IBAction)pageInfo;
+@interface PCPickerView1 : UIPickerView
+
 @end
