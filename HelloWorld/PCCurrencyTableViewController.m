@@ -15,6 +15,8 @@
 
 @implementation PCCurrencyTableViewController
 
+@synthesize name = _name;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -29,12 +31,22 @@
     [super dealloc];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if (![self.navigationController.viewControllers containsObject:self]) {
+        
+    }
+    
+    [super viewWillDisappear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
+    NSLog(@"%@", name);
     myData = [[NSArray alloc] initWithObjects:
               @"USA" , @"HongKong" , @"China" , @"Eroupe", @"Thailand" , nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.

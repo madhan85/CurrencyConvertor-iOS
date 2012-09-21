@@ -27,6 +27,9 @@
     return self;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+}
 
 - (void)viewDidLoad
 {
@@ -129,6 +132,17 @@
 #pragma mark Actions
 
 - (IBAction)textLabel:(id)sender {
-    NSLog(@"%@", sender);
-} 
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    PCCurrencyTableViewController *controller = segue.destinationViewController;
+    
+    UIButton *btn = (UIButton *)sender;
+    
+    NSLog(@"%@", [sender currentTitle]);
+    
+//    if ( [btn.accessibilityLabel isEqualToString:@"FromCurreny"]) {
+//        controller.name = @"from";
+//    }
+}
 @end

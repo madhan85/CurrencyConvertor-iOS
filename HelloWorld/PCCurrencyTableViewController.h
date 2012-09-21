@@ -11,7 +11,10 @@
 @interface PCCurrencyTableViewController : UITableViewController <UINavigationControllerDelegate> {
     NSArray *myData;
     NSString *textLabel;
+    NSString *name;
 }
+
+@property (nonatomic, strong) NSString *name;
 
 - (IBAction)pressButton1:(id)sender;
 @end
