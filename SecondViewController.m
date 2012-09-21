@@ -6,18 +6,17 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import "PCAppDelegate.h"
 #import "SecondViewController.h"
 #import "PCCurrency.h"
 #import "PCXMLParser.h"
+#import "PCCurrencyTableViewController.h"
 
 @interface SecondViewController ()
 @end
 
 @implementation SecondViewController
-@synthesize text1;
-@synthesize from;
-@synthesize currencies;
-
+@synthesize text1, from, currencies;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +26,7 @@
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -42,8 +42,6 @@
     [self setText1:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    self.currencyPicker = nil;
-    self.currencyPickerPopover = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -77,35 +75,6 @@
     //NSLog(@"after sendAsynchronousRequest");
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"HKDollar"]) {
-        ThirdViewController *ibcVC = [segue destinationViewController];
-        ibcVC->btnSelected = 1;
-        NSLog(@"currency = %@\n", self->currency);
-        ibcVC->currency = self->currency;
-    }
-}
-
-- (void)saveCurrencyValues:(NSString *)string
-{
-    NSMutableString *outputString = [[NSMutableString alloc] init];
-    NSLog(@"str=%@", outputString);
-    NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:@"<td class=\"col2\">[0-9]\{0,3}.[0-9]\{0,4}</td>" options:NSRegularExpressionCaseInsensitive error:nil];
-    NSArray *array = [expression matchesInString:string options:0 range:NSMakeRange(0, [string length])];
-    for (NSTextCheckingResult *matchStr in array) {
-        NSRange range = [matchStr rangeAtIndex:0];
-        NSString *song = [string substringWithRange:range];
-        NSArray *split = [song componentsSeparatedByString:@">"];
-        NSString *str=[split objectAtIndex:1];
-        split = [str componentsSeparatedByString:@"<"];
-        NSString *tmp=[split objectAtIndex:0];
-        //NSLog(@"str = %@", currency);
-
-        [outputString appendFormat:@"%@\n", tmp];
-    }
-    //NSLog(@"outputString = %@", outputString);
-    self->currency = outputString;
-}
 
 - (IBAction)FromCurrency:(id)sender {
     [from setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
@@ -146,14 +115,7 @@
     
     // test the result
     if (success) {
-        //NSLog(@"No errors - user count : %i", [parser [currencies count]]);
-        // get array of users here
         currencies = [parser currencies];
-        // NSLog(@"currencies=%@", [currencies count]);
-//        for (PCCurrency *x in currencies) {
-//            NSLog(@"currency=%@", x->currency);
-//            NSLog(@"rate=%@", x->rate);
-//        }
     } else {
         NSLog(@"Error parsing document!");
     }
@@ -162,4 +124,11 @@
     [nsXmlParser release];
     
 }
+
+#pragma mark -
+#pragma mark Actions
+
+- (IBAction)textLabel:(id)sender {
+    NSLog(@"%@", sender);
+} 
 @end

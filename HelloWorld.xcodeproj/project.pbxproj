@@ -25,6 +25,7 @@
 		CD785BBE15B99D9900416CAF /* PCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD785BBD15B99D9900416CAF /* PCViewController.m */; };
 		CD785BC115B99E5300416CAF /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD785BC015B99E5300416CAF /* ThirdViewController.m */; };
 		CD7AC56E15EA83AF00822459 /* usa.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD7AC56D15EA83AF00822459 /* usa.gif */; };
+		CDCD2836160B4E2900CE9597 /* PCCurrencyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */; };
 		CDDCE4DD1607518A0067D9A3 /* PCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */; };
 		CDDCE4E6160760CA0067D9A3 /* PCXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCE4E5160760CA0067D9A3 /* PCXMLParser.m */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,8 @@
 		CD785BBF15B99E5300416CAF /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		CD785BC015B99E5300416CAF /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		CD7AC56D15EA83AF00822459 /* usa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = usa.gif; sourceTree = "<group>"; };
+		CDCD2834160B4E2900CE9597 /* PCCurrencyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCurrencyTableViewController.h; sourceTree = "<group>"; };
+		CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCurrencyTableViewController.m; sourceTree = "<group>"; };
 		CDDCE4DB1607518A0067D9A3 /* PCCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCurrency.h; sourceTree = "<group>"; };
 		CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCurrency.m; sourceTree = "<group>"; };
 		CDDCE4E4160760CA0067D9A3 /* PCXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCXMLParser.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				CD0F61E815B7A9A6008E3E2B /* PCAppDelegate.h */,
 				CD0F61E915B7A9A6008E3E2B /* PCAppDelegate.m */,
 				CD0F61EB15B7A9A6008E3E2B /* MainStoryboard.storyboard */,
+				CDCD2834160B4E2900CE9597 /* PCCurrencyTableViewController.h */,
+				CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */,
 				CD785BBF15B99E5300416CAF /* ThirdViewController.h */,
 				CD785BC015B99E5300416CAF /* ThirdViewController.m */,
 				CD785BBC15B99D9900416CAF /* PCViewController.h */,
@@ -294,6 +299,7 @@
 				CD785BC115B99E5300416CAF /* ThirdViewController.m in Sources */,
 				CDDCE4DD1607518A0067D9A3 /* PCCurrency.m in Sources */,
 				CDDCE4E6160760CA0067D9A3 /* PCXMLParser.m in Sources */,
+				CDCD2836160B4E2900CE9597 /* PCCurrencyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
