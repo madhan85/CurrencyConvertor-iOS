@@ -8,6 +8,7 @@
 
 #import "PCCurrencyTableViewController.h"
 #import "SecondViewController.h"
+#import "PCAppDelegate.h"
 
 @interface PCCurrencyTableViewController ()
 
@@ -36,7 +37,9 @@
     if (![self.navigationController.viewControllers containsObject:self]) {
         
     }
-    
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
+    textLabel = cell.textLabel.text;    
+    [[PCAppDelegate sharedAppDelegate] passData:textLabel];
     [super viewWillDisappear:animated];
 }
 
@@ -46,9 +49,9 @@
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    NSLog(@"%@", name);
     myData = [[NSArray alloc] initWithObjects:
-              @"USA" , @"HongKong" , @"China" , @"Eroupe", @"Thailand" , nil];
+              @"USA" , @"Japan", @"Bulgarian", @"Czech", @"Danish", @"United Kingdom", @"Hungarian", @"Lithuanian", @"Latvian", @"Polish", @"New Romanian", @"Swedish", @"Swiss", @"Norwegian", @"Croatian", @"Russian", @"Turkish", @"Australian", @"Brasilian", @"Canadian", @"Chinese", @"HongKong" , @"Indonesian" , @"Israeli", @"Indian", @"South Korean", @"Mexican", @"Malaysian", @"New Zealand", @"Philippine", @"Singapore", @"Thailand", @"South African", @"Icelandic", nil];
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     //self.editing = NO;
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;

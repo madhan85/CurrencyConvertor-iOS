@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD048E301610AEBF0012A556 /* MyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD048E2F1610AEBF0012A556 /* MyAppDelegate.m */; };
+		CD048E3A1610DF1A0012A556 /* bgn.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD048E391610DF1A0012A556 /* bgn.gif */; };
+		CD048E3D1610E05B0012A556 /* czk.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD048E3B1610E05A0012A556 /* czk.gif */; };
 		CD0F61DA15B7A9A6008E3E2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0F61D915B7A9A6008E3E2B /* UIKit.framework */; };
 		CD0F61DC15B7A9A6008E3E2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0F61DB15B7A9A6008E3E2B /* Foundation.framework */; };
 		CD0F61DE15B7A9A6008E3E2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0F61DD15B7A9A6008E3E2B /* CoreGraphics.framework */; };
@@ -21,10 +24,17 @@
 		CD0F620515B7A9A7008E3E2B /* HelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F620415B7A9A7008E3E2B /* HelloWorldTests.m */; };
 		CD0F621015B7B08E008E3E2B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F620F15B7B08E008E3E2B /* SecondViewController.m */; };
 		CD0F621115B7B08E008E3E2B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F620F15B7B08E008E3E2B /* SecondViewController.m */; };
-		CD74FE8F15BC650300DB9B6D /* hk.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD74FE8E15BC650300DB9B6D /* hk.gif */; };
+		CD74FE8F15BC650300DB9B6D /* hkd.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD74FE8E15BC650300DB9B6D /* hkd.gif */; };
 		CD785BBE15B99D9900416CAF /* PCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD785BBD15B99D9900416CAF /* PCViewController.m */; };
 		CD785BC115B99E5300416CAF /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD785BC015B99E5300416CAF /* ThirdViewController.m */; };
-		CD7AC56E15EA83AF00822459 /* usa.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD7AC56D15EA83AF00822459 /* usa.gif */; };
+		CD7AC56E15EA83AF00822459 /* usd.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD7AC56D15EA83AF00822459 /* usd.gif */; };
+		CD86C0B216122360007E3CDE /* gbp.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0B116122360007E3CDE /* gbp.gif */; };
+		CD86C0B516122914007E3CDE /* huf.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0B316122914007E3CDE /* huf.gif */; };
+		CD86C0B616122914007E3CDE /* krw.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0B416122914007E3CDE /* krw.gif */; };
+		CD86C0B81612291F007E3CDE /* thb.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0B71612291F007E3CDE /* thb.gif */; };
+		CD86C0BA16122BF2007E3CDE /* dkk.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0B916122BF2007E3CDE /* dkk.gif */; };
+		CD86C0BC16122C18007E3CDE /* cny.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0BB16122C18007E3CDE /* cny.gif */; };
+		CD86C0BE16122C20007E3CDE /* jpy.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0BD16122C20007E3CDE /* jpy.gif */; };
 		CDCD2836160B4E2900CE9597 /* PCCurrencyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */; };
 		CDDCE4DD1607518A0067D9A3 /* PCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */; };
 		CDDCE4E6160760CA0067D9A3 /* PCXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCE4E5160760CA0067D9A3 /* PCXMLParser.m */; };
@@ -41,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD048E2E1610AEBF0012A556 /* MyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppDelegate.h; sourceTree = "<group>"; };
+		CD048E2F1610AEBF0012A556 /* MyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppDelegate.m; sourceTree = "<group>"; };
+		CD048E391610DF1A0012A556 /* bgn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bgn.gif; sourceTree = "<group>"; };
+		CD048E3B1610E05A0012A556 /* czk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = czk.gif; sourceTree = "<group>"; };
 		CD0F61D515B7A9A6008E3E2B /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0F61D915B7A9A6008E3E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD0F61DB15B7A9A6008E3E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,12 +74,19 @@
 		CD0F620415B7A9A7008E3E2B /* HelloWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldTests.m; sourceTree = "<group>"; };
 		CD0F620E15B7B08E008E3E2B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = SOURCE_ROOT; };
 		CD0F620F15B7B08E008E3E2B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = SOURCE_ROOT; };
-		CD74FE8E15BC650300DB9B6D /* hk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hk.gif; sourceTree = "<group>"; };
+		CD74FE8E15BC650300DB9B6D /* hkd.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hkd.gif; sourceTree = "<group>"; };
 		CD785BBC15B99D9900416CAF /* PCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCViewController.h; sourceTree = "<group>"; };
 		CD785BBD15B99D9900416CAF /* PCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCViewController.m; sourceTree = "<group>"; };
 		CD785BBF15B99E5300416CAF /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		CD785BC015B99E5300416CAF /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		CD7AC56D15EA83AF00822459 /* usa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = usa.gif; sourceTree = "<group>"; };
+		CD7AC56D15EA83AF00822459 /* usd.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = usd.gif; sourceTree = "<group>"; };
+		CD86C0B116122360007E3CDE /* gbp.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gbp.gif; sourceTree = "<group>"; };
+		CD86C0B316122914007E3CDE /* huf.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = huf.gif; sourceTree = "<group>"; };
+		CD86C0B416122914007E3CDE /* krw.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = krw.gif; sourceTree = "<group>"; };
+		CD86C0B71612291F007E3CDE /* thb.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thb.gif; sourceTree = "<group>"; };
+		CD86C0B916122BF2007E3CDE /* dkk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dkk.gif; sourceTree = "<group>"; };
+		CD86C0BB16122C18007E3CDE /* cny.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cny.gif; sourceTree = "<group>"; };
+		CD86C0BD16122C20007E3CDE /* jpy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = jpy.gif; sourceTree = "<group>"; };
 		CDCD2834160B4E2900CE9597 /* PCCurrencyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCurrencyTableViewController.h; sourceTree = "<group>"; };
 		CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCurrencyTableViewController.m; sourceTree = "<group>"; };
 		CDDCE4DB1607518A0067D9A3 /* PCCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCurrency.h; sourceTree = "<group>"; };
@@ -131,13 +152,24 @@
 		CD0F61DF15B7A9A6008E3E2B /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				CD74FE8E15BC650300DB9B6D /* hk.gif */,
-				CD7AC56D15EA83AF00822459 /* usa.gif */,
+				CD74FE8E15BC650300DB9B6D /* hkd.gif */,
+				CD048E391610DF1A0012A556 /* bgn.gif */,
+				CD7AC56D15EA83AF00822459 /* usd.gif */,
+				CD86C0BB16122C18007E3CDE /* cny.gif */,
+				CD86C0B116122360007E3CDE /* gbp.gif */,
+				CD86C0BD16122C20007E3CDE /* jpy.gif */,
 				CD0F61E815B7A9A6008E3E2B /* PCAppDelegate.h */,
 				CD0F61E915B7A9A6008E3E2B /* PCAppDelegate.m */,
 				CD0F61EB15B7A9A6008E3E2B /* MainStoryboard.storyboard */,
+				CD048E2E1610AEBF0012A556 /* MyAppDelegate.h */,
+				CD86C0B316122914007E3CDE /* huf.gif */,
+				CD86C0B416122914007E3CDE /* krw.gif */,
+				CD048E2F1610AEBF0012A556 /* MyAppDelegate.m */,
+				CD048E3B1610E05A0012A556 /* czk.gif */,
+				CD86C0B916122BF2007E3CDE /* dkk.gif */,
 				CDCD2834160B4E2900CE9597 /* PCCurrencyTableViewController.h */,
 				CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */,
+				CD86C0B71612291F007E3CDE /* thb.gif */,
 				CD785BBF15B99E5300416CAF /* ThirdViewController.h */,
 				CD785BC015B99E5300416CAF /* ThirdViewController.m */,
 				CD785BBC15B99D9900416CAF /* PCViewController.h */,
@@ -256,8 +288,17 @@
 			files = (
 				CD0F61E415B7A9A6008E3E2B /* InfoPlist.strings in Resources */,
 				CD0F61ED15B7A9A6008E3E2B /* MainStoryboard.storyboard in Resources */,
-				CD74FE8F15BC650300DB9B6D /* hk.gif in Resources */,
-				CD7AC56E15EA83AF00822459 /* usa.gif in Resources */,
+				CD74FE8F15BC650300DB9B6D /* hkd.gif in Resources */,
+				CD7AC56E15EA83AF00822459 /* usd.gif in Resources */,
+				CD048E3A1610DF1A0012A556 /* bgn.gif in Resources */,
+				CD048E3D1610E05B0012A556 /* czk.gif in Resources */,
+				CD86C0B216122360007E3CDE /* gbp.gif in Resources */,
+				CD86C0B516122914007E3CDE /* huf.gif in Resources */,
+				CD86C0B616122914007E3CDE /* krw.gif in Resources */,
+				CD86C0B81612291F007E3CDE /* thb.gif in Resources */,
+				CD86C0BA16122BF2007E3CDE /* dkk.gif in Resources */,
+				CD86C0BC16122C18007E3CDE /* cny.gif in Resources */,
+				CD86C0BE16122C20007E3CDE /* jpy.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +341,7 @@
 				CDDCE4DD1607518A0067D9A3 /* PCCurrency.m in Sources */,
 				CDDCE4E6160760CA0067D9A3 /* PCXMLParser.m in Sources */,
 				CDCD2836160B4E2900CE9597 /* PCCurrencyTableViewController.m in Sources */,
+				CD048E301610AEBF0012A556 /* MyAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

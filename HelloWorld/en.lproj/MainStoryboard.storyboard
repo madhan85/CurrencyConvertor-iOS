@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="FromCurrency"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="hk.gif">
+                                <state key="normal" backgroundImage="hkd.gif">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -48,7 +48,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="ToCurrency1"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="usa.gif">
+                                <state key="normal" image="usd.gif">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,7 +56,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qa6-Es-Wbn" kind="push" id="UNb-PF-nTQ"/>
+                                    <segue destination="qa6-Es-Wbn" kind="push" id="DpW-i8-7Cy"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Yvj-Gx-5Sx">
@@ -65,13 +65,130 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FVK-d2-kSn">
+                                <rect key="frame" x="13" y="124" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="jpy.gif">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qa6-Es-Wbn" kind="push" id="2PV-Ur-qvN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="HuK-BC-fTB">
+                                <rect key="frame" x="126" y="125" width="174" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="nRa-YM-pEc">
+                                <rect key="frame" x="126" y="192" width="174" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4mz-EO-flI">
+                                <rect key="frame" x="13" y="187" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="krw.gif">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qa6-Es-Wbn" kind="push" id="gcU-yL-hGR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="wa4-7d-Z3h">
+                                <rect key="frame" x="126" y="248" width="174" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ckl-d8-HQW">
+                                <rect key="frame" x="13" y="245" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="cny.gif">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qa6-Es-Wbn" kind="push" id="EwN-er-5pC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Rli-07-9jR">
+                                <rect key="frame" x="126" y="308" width="174" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nsU-gr-pEh">
+                                <rect key="frame" x="13" y="305" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="thb.gif">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qa6-Es-Wbn" kind="push" id="iHU-Ja-4ds"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="VC3-yF-9xd">
+                                <rect key="frame" x="126" y="367" width="174" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dCs-JS-zqp">
+                                <rect key="frame" x="13" y="364" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="gbp.gif">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qa6-Es-Wbn" kind="push" id="SjJ-tU-Fth"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="5bF-eT-KgM"/>
                     <connections>
+                        <outlet property="btn0" destination="08d-el-zYT" id="DhC-nw-z26"/>
+                        <outlet property="btn1" destination="UPl-G2-mF9" id="PbO-9e-Orf"/>
+                        <outlet property="btn2" destination="FVK-d2-kSn" id="NtQ-ay-lhU"/>
+                        <outlet property="btn3" destination="4mz-EO-flI" id="FlV-Bi-QrO"/>
+                        <outlet property="btn4" destination="ckl-d8-HQW" id="Khc-0z-ewA"/>
+                        <outlet property="btn5" destination="nsU-gr-pEh" id="mmb-Kz-kFk"/>
+                        <outlet property="btn6" destination="dCs-JS-zqp" id="vbZ-uZ-QpG"/>
                         <outlet property="from" destination="M0k-L6-KyN" id="PVm-4Y-rzV"/>
                         <outlet property="text1" destination="Yvj-Gx-5Sx" id="8IT-sA-HH6"/>
+                        <outlet property="text2" destination="HuK-BC-fTB" id="43h-PI-Q86"/>
+                        <outlet property="text3" destination="nRa-YM-pEc" id="nFZ-OQ-w81"/>
+                        <outlet property="text4" destination="wa4-7d-Z3h" id="MKf-qh-XE9"/>
+                        <outlet property="text5" destination="Rli-07-9jR" id="qRC-n7-N2v"/>
+                        <outlet property="text6" destination="VC3-yF-9xd" id="1uB-pk-pyT"/>
                     </connections>
                 </viewController>
             </objects>
@@ -82,7 +199,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmC-7F-hms" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qa6-Es-Wbn" customClass="PCCurrencyTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ejW-um-YgN">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ejW-um-YgN">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -105,7 +222,7 @@
                     <navigationItem key="navigationItem" id="Qja-k3-aZI"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="634" y="-62"/>
+            <point key="canvasLocation" x="657" y="-84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M4Y-6y-z0y">
@@ -124,8 +241,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hk.gif" width="324" height="215"/>
-        <image name="usa.gif" width="540" height="284"/>
+        <image name="cny.gif" width="356" height="240"/>
+        <image name="gbp.gif" width="500" height="332"/>
+        <image name="hkd.gif" width="324" height="215"/>
+        <image name="jpy.gif" width="1600" height="1200"/>
+        <image name="krw.gif" width="432" height="300"/>
+        <image name="thb.gif" width="406" height="286"/>
+        <image name="usd.gif" width="540" height="284"/>
     </resources>
     <classes>
         <class className="PCCurrencyTableViewController" superclassName="UITableViewController">
@@ -141,8 +263,20 @@
                 <relationship kind="action" name="buttonPressed:"/>
                 <relationship kind="action" name="pageInfo"/>
                 <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="outlet" name="btn0" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btn1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btn2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btn3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btn4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btn5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btn6" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="from" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="text1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="text2" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="text3" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="text4" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="text5" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="text6" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>
@@ -152,6 +286,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UNb-PF-nTQ"/>
+        <segue reference="iHU-Ja-4ds"/>
     </inferredMetricsTieBreakers>
 </document>

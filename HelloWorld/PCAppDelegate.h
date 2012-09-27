@@ -10,9 +10,11 @@
 
 @interface PCAppDelegate : UIResponder <UIApplicationDelegate> {
     UIWindow *window;
+    UIViewController *rootViewController;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-
++ (PCAppDelegate *)sharedAppDelegate;
+-(void)passData:(NSString*)myString;
 
 @end

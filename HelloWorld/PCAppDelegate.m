@@ -45,6 +45,19 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++ (PCAppDelegate *)sharedAppDelegate
+{
+    return (PCAppDelegate *) [UIApplication sharedApplication].delegate;
+}
+
+-(void)passData:(NSString*)myString
+{
+    
+    // pass data to parent of UINavigationController
+    [SecondViewController hereIsSomeData:myString];
+    
+}
+
 - (void)dealloc {
     [window release];
     [super dealloc];
