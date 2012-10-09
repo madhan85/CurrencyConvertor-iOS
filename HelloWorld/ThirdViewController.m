@@ -45,7 +45,7 @@
                                       [NSNumber numberWithFloat:0.6206], 
                                       [NSNumber numberWithFloat:81.57],nil]];
   */ 
-    NSArray *ptr = [self->currency componentsSeparatedByString:@"\n"];
+    NSArray *ptr = [[self->currency componentsSeparatedByString:@"\n"] autorelease];
     for (int i = 0; i < [ptr count]; i++) {
         float my_float = [[ptr objectAtIndex:i] floatValue];
         NSNumber *num = [NSNumber numberWithFloat:my_float];
@@ -54,6 +54,7 @@
     for (int i = 0; i < [exchangeRates count]; i++) {
         NSLog(@"rate is %@\n", [exchangeRates objectAtIndex:i]);
     }
+    //[ptr release];
 }
 
 - (void)viewDidUnload
@@ -64,7 +65,14 @@
     self.resultLabel = nil;
     self.dollarText = nil;
     self.picker1 = nil;
+    self.exchangeRates = nil;
     
+}
+
+- (void) dealloc
+{
+    [self.exchangeRates release];
+    [super dealloc];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -108,6 +116,7 @@ numberOfRowsInComponent:(NSInteger)component
         NSLog(@"currency = %@\n", currency);
     }
     resultLabel.text = resultString;
+    [resultString release];
 }
 
 -(IBAction)textFieldReturn:(id)sender

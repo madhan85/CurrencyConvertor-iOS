@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E2705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="MM4-MF-n6D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G56" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="MM4-MF-n6D">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
         <!--Second View Controller-->
         <scene sceneID="2gC-2u-DdT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NzJ-XQ-q8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ztL-xc-gah" customClass="SecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NT9-F9-A71">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="08d-el-zYT" userLabel="FromCurrency">
-                                <rect key="frame" x="13" y="7" width="72" height="37"/>
+                                <rect key="frame" x="13" y="81" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="FromCurrency"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -32,23 +29,22 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="M0k-L6-KyN">
-                                <rect key="frame" x="126" y="10" width="174" height="31"/>
+                                <rect key="frame" x="126" y="84" width="174" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="CkU-ZR-wMf"/>
-                                    <action selector="textFieldReturn:" destination="NzJ-XQ-q8G" eventType="editingDidEnd" id="FVn-Bs-lJz"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="WRb-Wj-dIH"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="h83-k2-Aan"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UPl-G2-mF9" userLabel="ToCurrency1">
-                                <rect key="frame" x="13" y="65" width="72" height="37"/>
+                                <rect key="frame" x="13" y="125" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="ToCurrency1"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="usd.gif">
+                                <state key="normal" backgroundImage="usd.gif">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,16 +56,21 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Yvj-Gx-5Sx">
-                                <rect key="frame" x="126" y="68" width="174" height="31"/>
+                                <rect key="frame" x="126" y="128" width="174" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="Eev-KU-WB7"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="5rR-YF-ypY"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="P5m-dN-iVb"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FVK-d2-kSn">
-                                <rect key="frame" x="13" y="124" width="72" height="37"/>
+                                <rect key="frame" x="13" y="171" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="jpy.gif">
+                                <state key="normal" backgroundImage="jpy.gif">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -81,22 +82,32 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="HuK-BC-fTB">
-                                <rect key="frame" x="126" y="125" width="174" height="31"/>
+                                <rect key="frame" x="126" y="174" width="174" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="bI6-T0-PcU"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="7VY-9A-WZD"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="DzZ-qh-Mlr"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="nRa-YM-pEc">
-                                <rect key="frame" x="126" y="192" width="174" height="31"/>
+                                <rect key="frame" x="126" y="224" width="174" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="h9Y-gr-8Ob"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="VFS-vz-smj"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="ofg-2z-YYf"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4mz-EO-flI">
-                                <rect key="frame" x="13" y="187" width="72" height="37"/>
+                                <rect key="frame" x="13" y="219" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="krw.gif">
+                                <state key="normal" backgroundImage="krw.gif">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -108,16 +119,22 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="wa4-7d-Z3h">
-                                <rect key="frame" x="126" y="248" width="174" height="31"/>
+                                <rect key="frame" x="126" y="272" width="174" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="MQJ-nH-bgZ"/>
+                                    <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="W9q-Kz-LpW"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="SVA-zm-2Qy"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="skM-7u-DKu"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ckl-d8-HQW">
-                                <rect key="frame" x="13" y="245" width="72" height="37"/>
+                                <rect key="frame" x="13" y="269" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="cny.gif">
+                                <state key="normal" backgroundImage="cny.gif">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -129,16 +146,22 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Rli-07-9jR">
-                                <rect key="frame" x="126" y="308" width="174" height="31"/>
+                                <rect key="frame" x="126" y="320" width="174" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="9PK-xD-TQs"/>
+                                    <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="zqh-cS-mEQ"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="IyS-Zt-aSc"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="rOL-DS-crJ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nsU-gr-pEh">
-                                <rect key="frame" x="13" y="305" width="72" height="37"/>
+                                <rect key="frame" x="13" y="317" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="thb.gif">
+                                <state key="normal" backgroundImage="thb.gif">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -154,12 +177,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="NaZ-fP-Xig"/>
+                                    <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="MmW-kD-t0m"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="xp0-yx-8fw"/>
+                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="yXa-q7-hIR"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dCs-JS-zqp">
                                 <rect key="frame" x="13" y="364" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="gbp.gif">
+                                <state key="normal" backgroundImage="gbp.gif">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -182,7 +211,7 @@
                         <outlet property="btn4" destination="ckl-d8-HQW" id="Khc-0z-ewA"/>
                         <outlet property="btn5" destination="nsU-gr-pEh" id="mmb-Kz-kFk"/>
                         <outlet property="btn6" destination="dCs-JS-zqp" id="vbZ-uZ-QpG"/>
-                        <outlet property="from" destination="M0k-L6-KyN" id="PVm-4Y-rzV"/>
+                        <outlet property="text0" destination="M0k-L6-KyN" id="o41-V3-LOD"/>
                         <outlet property="text1" destination="Yvj-Gx-5Sx" id="8IT-sA-HH6"/>
                         <outlet property="text2" destination="HuK-BC-fTB" id="43h-PI-Q86"/>
                         <outlet property="text3" destination="nRa-YM-pEc" id="nFZ-OQ-w81"/>
@@ -191,13 +220,13 @@
                         <outlet property="text6" destination="VC3-yF-9xd" id="1uB-pk-pyT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NzJ-XQ-q8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="224" y="-62"/>
         </scene>
         <!--Currency Table View Controller-->
         <scene sceneID="EjT-B4-Djz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DmC-7F-hms" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qa6-Es-Wbn" customClass="PCCurrencyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ejW-um-YgN">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -221,13 +250,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Qja-k3-aZI"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DmC-7F-hms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="657" y="-84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M4Y-6y-z0y">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A4N-Js-VxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="MM4-MF-n6D" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Hzv-v8-mmZ">
                         <autoresizingMask key="autoresizingMask"/>
@@ -236,17 +265,18 @@
                         <segue destination="ztL-xc-gah" kind="relationship" relationship="rootViewController" id="dG1-m2-VWw"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4N-Js-VxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-219" y="-62"/>
         </scene>
     </scenes>
     <resources>
         <image name="cny.gif" width="356" height="240"/>
-        <image name="gbp.gif" width="500" height="332"/>
+        <image name="gbp.gif" width="360" height="240"/>
         <image name="hkd.gif" width="324" height="215"/>
         <image name="jpy.gif" width="1600" height="1200"/>
-        <image name="krw.gif" width="432" height="300"/>
-        <image name="thb.gif" width="406" height="286"/>
+        <image name="krw.gif" width="360" height="240"/>
+        <image name="thb.gif" width="360" height="240"/>
         <image name="usd.gif" width="540" height="284"/>
     </resources>
     <classes>
@@ -261,8 +291,9 @@
             <relationships>
                 <relationship kind="action" name="FromCurrency:"/>
                 <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="action" name="pageInfo"/>
+                <relationship kind="action" name="textFieldBegin:"/>
                 <relationship kind="action" name="textFieldReturn:"/>
+                <relationship kind="action" name="textLabel:"/>
                 <relationship kind="outlet" name="btn0" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btn1" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btn2" candidateClass="UIButton"/>
@@ -270,7 +301,7 @@
                 <relationship kind="outlet" name="btn4" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btn5" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btn6" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="from" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="text0" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="text1" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="text2" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="text3" candidateClass="UITextField"/>

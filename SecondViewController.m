@@ -17,10 +17,24 @@
 @end
 
 @implementation SecondViewController
-@synthesize text1, text2, text3, text4, text5, text6, from, currencies;
+@synthesize bannerIsVisible;
+@synthesize text1, text2, text3, text4, text5, text6, text0, currencies;
 @synthesize btn0, btn1, btn2, btn3, btn4, btn5, btn6;
 int selected = -1;
-NSString *SelectedCurrency;
+
+static SecondViewController *instance=nil;
+
++ (SecondViewController *) getInstance
+{
+    @synchronized(self)
+    {
+        if (instance == nil)
+        {
+            instance = [SecondViewController  new];
+        }
+    }
+    return instance;
+}
 
 -(NSString *) getCountryImage:(NSString *)name 
 {
@@ -31,39 +45,40 @@ NSString *SelectedCurrency;
     else if ([name isEqualToString:@"Danish"]) { return @"dkk"; }
     else if ([name isEqualToString:@"United Kingdom"]) { return @"gbp"; }
     else if ([name isEqualToString:@"Hungarian"]) { return @"huf"; }
-    else if ([name isEqualToString:@"Lithuanian"]) { return @"lithuanian.jpg"; }
-    else if ([name isEqualToString:@"Latvian"]) { return @"latvian.jpg"; }
-    else if ([name isEqualToString:@"Polish"]) { return @"polish.jpg"; }
-    else if ([name isEqualToString:@"New Romanian"]) { return @"romanian.jpg"; }
-    else if ([name isEqualToString:@"Swedish"]) { return @"swedish.jpg"; }
-    else if ([name isEqualToString:@"Swiss"]) { return @"swiss.jpg"; }
-    else if ([name isEqualToString:@"Norwegian"]) { return @"norwegian.jpg"; }
-    else if ([name isEqualToString:@"Croatian"]) { return @"croatian.jpg"; }
-    else if ([name isEqualToString:@"Russian"]) { return @"russian.jpg"; }
-    else if ([name isEqualToString:@"Turkish"]) { return @"turkish.jpg"; }
-    else if ([name isEqualToString:@"Australian"]) { return @"australian.jpg"; } 
-    else if ([name isEqualToString:@"Brasilian"]) { return @"brasilian.jpg"; }
-    else if ([name isEqualToString:@"Canadian"]) { return @"canadian.jpg"; }
+    else if ([name isEqualToString:@"Lithuanian"]) { return @"ltl"; }
+    else if ([name isEqualToString:@"Latvian"]) { return @"lvl"; }
+    else if ([name isEqualToString:@"Polish"]) { return @"pln"; }
+    else if ([name isEqualToString:@"New Romanian"]) { return @"ron"; }
+    else if ([name isEqualToString:@"Swedish"]) { return @"sek"; }
+    else if ([name isEqualToString:@"Swiss"]) { return @"chf"; }
+    else if ([name isEqualToString:@"Norwegian"]) { return @"nok"; }
+    else if ([name isEqualToString:@"Croatian"]) { return @"hrk"; }
+    else if ([name isEqualToString:@"Russian"]) { return @"rub"; }
+    else if ([name isEqualToString:@"Turkish"]) { return @"try"; }
+    else if ([name isEqualToString:@"Australian"]) { return @"aud"; } 
+    else if ([name isEqualToString:@"Brasilian"]) { return @"brl"; }
+    else if ([name isEqualToString:@"Canadian"]) { return @"cad"; }
     else if ([name isEqualToString:@"Chinese"]) { return @"cny"; }
-    else if ([name isEqualToString:@"Indonesian"]) { return @"indonesian.jpg"; }
-    else if ([name isEqualToString:@"Israeli"]) { return @"israeli.jpg"; } 
-    else if ([name isEqualToString:@"Indian"]) { return @"indian.jpg"; }
+    else if ([name isEqualToString:@"Indonesian"]) { return @"idr"; }
+    else if ([name isEqualToString:@"Israeli"]) { return @"ils"; } 
+    else if ([name isEqualToString:@"Indian"]) { return @"inr"; }
     else if ([name isEqualToString:@"South Korean"]) { return @"krw"; } 
-    else if ([name isEqualToString:@"Mexican"]) { return @"mexican.jpg"; }
-    else if ([name isEqualToString:@"Malaysian"]) { return @"malaysian.jpg"; } 
-    else if ([name isEqualToString:@"New Zealand"]) { return @"new-zealand.jpg"; }
-    else if ([name isEqualToString:@"Philippine"]) { return @"philippine.jpg"; } 
-    else if ([name isEqualToString:@"Singapore"]) { return @"singapore.jpg"; }
+    else if ([name isEqualToString:@"Mexican"]) { return @"msn"; }
+    else if ([name isEqualToString:@"Malaysian"]) { return @"myr"; } 
+    else if ([name isEqualToString:@"New Zealand"]) { return @"nzd"; }
+    else if ([name isEqualToString:@"Philippine"]) { return @"php"; } 
+    else if ([name isEqualToString:@"Singapore"]) { return @"sgd"; }
     else if ([name isEqualToString:@"Thailand"]) { return @"thb"; } 
-    else if ([name isEqualToString:@"South African"]) { return @"south-african.jpg"; }
-    else if ([name isEqualToString:@"Icelandic"]) { return @"icelandic.jpg"; } 
+    else if ([name isEqualToString:@"South African"]) { return @"zar"; }
+    else if ([name isEqualToString:@"Icelandic"]) { return @"isk"; } 
     else if ([name isEqualToString:@"Japan"]) { return @"jpy"; }
     else { return nil; }
 }
 
 + (void) hereIsSomeData:(NSString *) data
 {
-    SelectedCurrency = data;
+    SecondViewController *obj = [SecondViewController getInstance];
+    obj->SelectedCurrency = data;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -79,8 +94,13 @@ NSString *SelectedCurrency;
 - (void)viewWillAppear:(BOOL)animated 
 {
     if (selected >= 0) {
-        NSString *name = [self getCountryImage:SelectedCurrency];
-        NSString *filename = [name stringByAppendingFormat:@".gif"];
+        SecondViewController *obj = [SecondViewController getInstance];
+        if (obj->SelectedCurrency != nil) {
+        NSString *name = [self getCountryImage:obj->SelectedCurrency];
+        NSMutableString *filename = [NSMutableString stringWithCapacity:0];
+        [filename appendString:name];
+        [filename appendString:@".gif"];
+        
         switch (selected) {
             case 0:
                 if (name != nil) { 
@@ -107,7 +127,7 @@ NSString *SelectedCurrency;
                 }
                 break;
             case 4:
-                if (name != nil) { 
+                if (name != nil) {
                     [btn4 setBackgroundImage:[UIImage imageNamed:filename] forState:UIControlStateNormal];
                     currency4 = name;
                 }
@@ -127,8 +147,10 @@ NSString *SelectedCurrency;
             default:
                 break;
         }
+        }
     }
     [super viewWillAppear:animated];
+    [self textFieldReturn:btn0];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -137,6 +159,13 @@ NSString *SelectedCurrency;
 
 - (void)viewDidLoad
 {
+    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    adView.frame = CGRectMake(0.0, 0.0, adView.frame.size.width, adView.frame.size.height);
+    [adView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin];
+    [self.view addSubview:adView];
+    adView.delegate=self;
+    self.bannerIsVisible=NO;
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self performSelectorInBackground:@selector(getCurrencyAsync) withObject:nil];
@@ -152,6 +181,7 @@ NSString *SelectedCurrency;
 
 - (void)viewDidUnload
 {
+    adView = nil;
     [self setFrom:nil];
     [self setText1:nil];
     [super viewDidUnload];
@@ -163,11 +193,6 @@ NSString *SelectedCurrency;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)pageInfo {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Currently displaying View One" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    [alert show];
-}
-
 - (void)getCurrencyAsync {
     NSString *urlAddrsss = @"http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml";
     NSURL *url = [NSURL URLWithString:urlAddrsss];
@@ -176,22 +201,67 @@ NSString *SelectedCurrency;
     [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         if ([data length] > 0 && error == nil) {
             NSString *html = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"HTML = %@", html);
+            //NSLog(@"HTML = %@", html);
             [self doParse:[html dataUsingEncoding:NSUTF8StringEncoding]];
+            NSFileManager *filemgr;
+            NSData *databuffer;
+            NSString *datafile;
+            NSString *docsDir;
+            NSArray *dirPaths;
+            filemgr = [NSFileManager defaultManager];
+            dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            docsDir = [dirPaths objectAtIndex:0];
+            datafile = [docsDir stringByAppendingPathComponent: @"datafile.dat"];
+            databuffer = [html dataUsingEncoding: NSASCIIStringEncoding];
+            [filemgr createFileAtPath: datafile contents: databuffer attributes:nil];
         }
         else if ([data length] == 0 && error == nil) {
             NSLog(@"Nothing was downloaded");
+            [self readFileAction];
         } else if (error != nil) {
             NSLog(@"Error happened = %@", error);
+            [self readFileAction];
         }
     }];
-    NSLog(@"after sendAsynchronousRequest");
+    //NSLog(@"after sendAsynchronousRequest");
+    [queue release];
 }
 
+- (void) readFileAction {
+    NSFileManager *filemgr;
+    NSData *databuffer;
+    NSString *datafile;
+    NSString *docsDir;
+    NSArray *dirPaths;
+    filemgr = [NSFileManager defaultManager];
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    datafile = [docsDir stringByAppendingPathComponent: @"datafile.dat"];
+    if ([filemgr isReadableFileAtPath:datafile] == YES) {
+        databuffer = [filemgr contentsAtPath:datafile];
+        [self doParse:databuffer];
+    }
+}
 
 - (IBAction)FromCurrency:(id)sender {
-    [from setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
-    [from setReturnKeyType:UIReturnKeyDone];
+    UITextField *field = (UITextField*)sender;
+    if ([field isEqual:from]) {
+        textSelected = 0;
+    } else if ([field isEqual:text1]) {
+        textSelected = 1;
+    } else if ([field isEqual:text2]) {
+        textSelected = 2;
+    } else if ([field isEqual:text3]) {
+        textSelected = 3;
+    } else if ([field isEqual:text4]) {
+        textSelected = 4;
+    } else if ([field isEqual:text5]) {
+        textSelected = 5;
+    } else if ([field isEqual:text6]) {
+        textSelected = 6;
+    }
+    [field setKeyboardType:UIKeyboardTypeDecimalPad];
+    [field setReturnKeyType:UIReturnKeyDone];
 }
 
 -(IBAction)textFieldReturn:(id)sender
@@ -203,48 +273,338 @@ NSString *SelectedCurrency;
     float to_rate4;
     float to_rate5;
     float to_rate6;
-    fromCurrency = [from.text intValue];
-    
-    for (PCCurrency *ptr in currencies) {
-        if ([ptr->currency isEqualToString:[currency0 uppercaseString]]) {
-            from_rate = [ptr->rate floatValue];        }
+    switch (textSelected) {
+        case 0:
+            fromCurrency = [text0.text intValue];
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency0 uppercaseString]]) {
+                    from_rate = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency1 uppercaseString]]) {
+                    to_rate1 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency2 uppercaseString]]) {
+                    to_rate2 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency3 uppercaseString]]) {
+                    to_rate3 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency4 uppercaseString]]) {
+                    to_rate4 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency5 uppercaseString]]) {
+                    to_rate5 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency6 uppercaseString]]) {
+                    to_rate6 = [ptr->rate floatValue];
+                }
+            }
+            if (fromCurrency > 0) {
+                if (to_rate1 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+            }
+            break;
+        case 1:
+            fromCurrency = [text1.text intValue];
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency1 uppercaseString]]) {
+                    from_rate = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency0 uppercaseString]]) {
+                    to_rate1 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency2 uppercaseString]]) {
+                    to_rate2 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency3 uppercaseString]]) {
+                    to_rate3 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency4 uppercaseString]]) {
+                    to_rate4 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency5 uppercaseString]]) {
+                    to_rate5 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency6 uppercaseString]]) {
+                    to_rate6 = [ptr->rate floatValue];
+                }
+            }
+            if (fromCurrency > 0) {
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+            }
+            break;
+        case 2:
+            fromCurrency = [text2.text intValue];
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency2 uppercaseString]]) {
+                    from_rate = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency0 uppercaseString]]) {
+                    to_rate1 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency1 uppercaseString]]) {
+                    to_rate2 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency3 uppercaseString]]) {
+                    to_rate3 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency4 uppercaseString]]) {
+                    to_rate4 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency5 uppercaseString]]) {
+                    to_rate5 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency6 uppercaseString]]) {
+                    to_rate6 = [ptr->rate floatValue];
+                }
+            }
+            if (fromCurrency > 0) {
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+            }
+            break;
+        case 3:
+            fromCurrency = [text3.text intValue];
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency3 uppercaseString]]) {
+                    from_rate = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency0 uppercaseString]]) {
+                    to_rate1 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency1 uppercaseString]]) {
+                    to_rate2 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency2 uppercaseString]]) {
+                    to_rate3 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency4 uppercaseString]]) {
+                    to_rate4 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency5 uppercaseString]]) {
+                    to_rate5 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency6 uppercaseString]]) {
+                    to_rate6 = [ptr->rate floatValue];
+                }
+            }
+            if (fromCurrency > 0) {
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+            }
+            break;
+        case 4:
+            fromCurrency = [text4.text intValue];
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency4 uppercaseString]]) {
+                    from_rate = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency0 uppercaseString]]) {
+                    to_rate1 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency1 uppercaseString]]) {
+                    to_rate2 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency2 uppercaseString]]) {
+                    to_rate3 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency3 uppercaseString]]) {
+                    to_rate4 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency5 uppercaseString]]) {
+                    to_rate5 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency6 uppercaseString]]) {
+                    to_rate6 = [ptr->rate floatValue];
+                }
+            }
+            if (fromCurrency > 0) {
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+            }
+            break;
+        case 5:
+            fromCurrency = [text5.text intValue];
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency5 uppercaseString]]) {
+                    from_rate = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency0 uppercaseString]]) {
+                    to_rate1 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency1 uppercaseString]]) {
+                    to_rate2 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency2 uppercaseString]]) {
+                    to_rate3 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency3 uppercaseString]]) {
+                    to_rate4 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency4 uppercaseString]]) {
+                    to_rate5 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency6 uppercaseString]]) {
+                    to_rate6 = [ptr->rate floatValue];
+                }
+            }
+            if (fromCurrency > 0) {
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+            }
+            break;
+        case 6:
+            fromCurrency = [text6.text intValue];
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency6 uppercaseString]]) {
+                    from_rate = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency0 uppercaseString]]) {
+                    to_rate1 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency1 uppercaseString]]) {
+                    to_rate2 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency2 uppercaseString]]) {
+                    to_rate3 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency3 uppercaseString]]) {
+                    to_rate4 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency4 uppercaseString]]) {
+                    to_rate5 = [ptr->rate floatValue];
+                }
+            }
+            for (PCCurrency *ptr in currencies) {
+                if ([ptr->currency isEqualToString:[currency5 uppercaseString]]) {
+                    to_rate6 = [ptr->rate floatValue];
+                }
+            }
+            if (fromCurrency > 0) {
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+            }
+            break;
+        default:
+            break;
     }
-    for (PCCurrency *ptr in currencies) {
-        if ([ptr->currency isEqualToString:[currency1 uppercaseString]]) {
-            to_rate1 = [ptr->rate floatValue];
-        }
-    }
-    for (PCCurrency *ptr in currencies) {
-        if ([ptr->currency isEqualToString:[currency2 uppercaseString]]) {
-            to_rate2 = [ptr->rate floatValue];
-        }
-    }
-    for (PCCurrency *ptr in currencies) {
-        if ([ptr->currency isEqualToString:[currency3 uppercaseString]]) {
-            to_rate3 = [ptr->rate floatValue];
-        }
-    }
-    for (PCCurrency *ptr in currencies) {
-        if ([ptr->currency isEqualToString:[currency4 uppercaseString]]) {
-            to_rate4 = [ptr->rate floatValue];
-        }
-    }
-    for (PCCurrency *ptr in currencies) {
-        if ([ptr->currency isEqualToString:[currency5 uppercaseString]]) {
-            to_rate5 = [ptr->rate floatValue];
-        }
-    }
-    for (PCCurrency *ptr in currencies) {
-        if ([ptr->currency isEqualToString:[currency6 uppercaseString]]) {
-            to_rate6 = [ptr->rate floatValue];
-        }
-    }
-    text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
-    text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
-    text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
-    text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
-    text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
-    text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.35f];
+    CGRect frame = self.view.frame;
+    frame.origin.y = origin_y;
+    [self.view setFrame:frame];
+    [UIView commitAnimations];
     [sender resignFirstResponder];
 }
 
@@ -279,6 +639,17 @@ NSString *SelectedCurrency;
 - (IBAction)textLabel:(id)sender {
 }
 
+- (IBAction)textFieldBegin:(id)sender
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.35f];
+    CGRect frame = self.view.frame;
+    origin_y = frame.origin.y;
+    frame.origin.y = -200;
+    [self.view setFrame:frame];
+    [UIView commitAnimations];
+}
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIButton *btn = (UIButton *)sender;
         
@@ -302,6 +673,30 @@ NSString *SelectedCurrency;
     }
     if ([ btn isEqual:btn6]) {
         selected = 6;
+    }
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!self.bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        // banner is invisible now and moved out of the screen on 50 px
+        adView.frame = CGRectMake(0.0, 0.0, adView.frame.size.width, adView.frame.size.height);
+        [UIView commitAnimations];
+        self.bannerIsVisible = YES;
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    if (self.bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        // banner is visible and we move it out of the screen, due to connection issue
+        adView.frame = CGRectMake(0.0, 0.0, adView.frame.size.width, adView.frame.size.height);
+        [UIView commitAnimations];
+        self.bannerIsVisible = NO;
     }
 }
 @end

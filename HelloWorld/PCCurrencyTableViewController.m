@@ -38,8 +38,10 @@
         
     }
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
-    textLabel = cell.textLabel.text;    
-    [[PCAppDelegate sharedAppDelegate] passData:textLabel];
+    if (cell != nil) {
+        textLabel = cell.textLabel.text;
+        [[PCAppDelegate sharedAppDelegate] passData:textLabel];
+    }
     [super viewWillDisappear:animated];
 }
 

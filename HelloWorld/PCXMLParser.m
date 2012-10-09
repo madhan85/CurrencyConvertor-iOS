@@ -14,9 +14,10 @@
 @synthesize currency, currencies;
 
 - (PCXMLParser *) initXMLParser {
+    currencies = [[NSMutableArray alloc] init];
     [super init];
     // init array of user objects 
-    currencies = [[NSMutableArray alloc] init];
+    
     return self;
 }
 
@@ -31,8 +32,8 @@ didStartElement:(NSString *)elementName
         //We do not have any attributes in the user elements, but if
         // you do, you can extract them here: 
         currency.rate = [attributeDict objectForKey:@"rate"];
-        currency.currency = [attributeDict objectForKey:@"currency"];    }
-
+        currency.currency = [attributeDict objectForKey:@"currency"];
+    }
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
