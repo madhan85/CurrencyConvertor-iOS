@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CD0F61D415B7A9A6008E3E2B"
-               BuildableName = "HelloWorld.app"
+               BuildableName = "International Currency Convertor - Free.app"
                BlueprintName = "HelloWorld"
                ReferencedContainer = "container:HelloWorld.xcodeproj">
             </BuildableReference>
@@ -42,7 +42,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CD0F61D415B7A9A6008E3E2B"
-            BuildableName = "HelloWorld.app"
+            BuildableName = "International Currency Convertor - Free.app"
             BlueprintName = "HelloWorld"
             ReferencedContainer = "container:HelloWorld.xcodeproj">
          </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CD0F61D415B7A9A6008E3E2B"
-            BuildableName = "HelloWorld.app"
+            BuildableName = "International Currency Convertor - Free.app"
             BlueprintName = "HelloWorld"
             ReferencedContainer = "container:HelloWorld.xcodeproj">
          </BuildableReference>
@@ -79,7 +79,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CD0F61D415B7A9A6008E3E2B"
-            BuildableName = "HelloWorld.app"
+            BuildableName = "International Currency Convertor - Free.app"
             BlueprintName = "HelloWorld"
             ReferencedContainer = "container:HelloWorld.xcodeproj">
          </BuildableReference>

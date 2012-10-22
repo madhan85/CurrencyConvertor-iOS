@@ -166,7 +166,6 @@ static SecondViewController *instance=nil;
     adView.delegate=self;
     self.bannerIsVisible=NO;
     
-    [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self performSelectorInBackground:@selector(getCurrencyAsync) withObject:nil];
     currency0 = @"hkd";
@@ -177,12 +176,15 @@ static SecondViewController *instance=nil;
     currency5 = @"thb";
     currency6 = @"cny";
     self->currency = [[NSMutableString alloc] init];
+    [super viewDidLoad];
 }
 
 - (void)viewDidUnload
 {
     adView = nil;
-    [self setFrom:nil];
+    //[self setFrom:nil];
+    currency = nil;
+    currencies = nil;
     [self setText1:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -200,8 +202,8 @@ static SecondViewController *instance=nil;
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         if ([data length] > 0 && error == nil) {
-            NSString *html = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-            //NSLog(@"HTML = %@", html);
+            NSString *html = [[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+            NSLog(@"HTML = %@", html);
             [self doParse:[html dataUsingEncoding:NSUTF8StringEncoding]];
             NSFileManager *filemgr;
             NSData *databuffer;
@@ -214,6 +216,8 @@ static SecondViewController *instance=nil;
             datafile = [docsDir stringByAppendingPathComponent: @"datafile.dat"];
             databuffer = [html dataUsingEncoding: NSASCIIStringEncoding];
             [filemgr createFileAtPath: datafile contents: databuffer attributes:nil];
+            
+            databuffer = nil;
         }
         else if ([data length] == 0 && error == nil) {
             NSLog(@"Nothing was downloaded");
@@ -266,13 +270,13 @@ static SecondViewController *instance=nil;
 
 -(IBAction)textFieldReturn:(id)sender
 {
-    float from_rate;
-    float to_rate1;
-    float to_rate2;
-    float to_rate3;
-    float to_rate4;
-    float to_rate5;
-    float to_rate6;
+    float from_rate = 0;
+    float to_rate1 = 0;
+    float to_rate2 = 0;
+    float to_rate3 = 0;
+    float to_rate4 = 0;
+    float to_rate5 = 0;
+    float to_rate6 = 0;
     switch (textSelected) {
         case 0:
             fromCurrency = [text0.text intValue];
@@ -624,7 +628,7 @@ static SecondViewController *instance=nil;
     
     // test the result
     if (success) {
-        currencies = [parser currencies];
+        self.currencies = [parser currencies];
     } else {
         NSLog(@"Error parsing document!");
     }

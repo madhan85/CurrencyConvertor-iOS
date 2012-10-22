@@ -24,20 +24,19 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        countryNames = [[NSArray alloc] initWithObjects:
+                             @"Australia (AUD)", @"China (CNY)", @"France (EUR)",
+                             @"Great Britain (GBP)", @"Japan (JPY)", nil];
+        
+        exchangeRates = [[[NSMutableArray alloc] initWithCapacity:5] autorelease];
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.countryNames = [[NSArray alloc] initWithObjects:
-                         @"Australia (AUD)", @"China (CNY)", @"France (EUR)",
-                         @"Great Britain (GBP)", @"Japan (JPY)", nil];
-    
-    self.exchangeRates = [[NSMutableArray alloc] initWithCapacity:5];
-        
+    [super viewDidLoad];
  /*   
     [exchangeRates addObject: [NSArray arrayWithObjects:[NSNumber numberWithFloat:0.9922],
                                       [NSNumber numberWithFloat:6.5938], 
@@ -45,7 +44,7 @@
                                       [NSNumber numberWithFloat:0.6206], 
                                       [NSNumber numberWithFloat:81.57],nil]];
   */ 
-    NSArray *ptr = [[self->currency componentsSeparatedByString:@"\n"] autorelease];
+    NSArray *ptr = [self->currency componentsSeparatedByString:@"\n"];
     for (int i = 0; i < [ptr count]; i++) {
         float my_float = [[ptr objectAtIndex:i] floatValue];
         NSNumber *num = [NSNumber numberWithFloat:my_float];
@@ -65,13 +64,14 @@
     self.resultLabel = nil;
     self.dollarText = nil;
     self.picker1 = nil;
-    self.exchangeRates = nil;
-    
+    exchangeRates = nil;
+    countryNames = nil;
 }
 
 - (void) dealloc
 {
-    [self.exchangeRates release];
+    [countryNames release];
+    [exchangeRates release];
     [super dealloc];
 }
 

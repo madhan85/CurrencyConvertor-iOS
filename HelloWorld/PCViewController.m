@@ -39,9 +39,4 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-- (IBAction)pageInfo {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Currently displaying View One" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    [alert show];
-}
 @end

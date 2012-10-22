@@ -8,6 +8,4 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCViewController : UIViewController
--(IBAction)pageInfo;
-@end
+@interface PCViewController : UIViewController@end

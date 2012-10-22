@@ -62,10 +62,9 @@
 -(NSString *)getCountryImage:(NSString *)name;
 -(void)getCurrencyAsync;
 +(void)hereIsSomeData:(NSString *) data;
-+(void)sendAsynchronousREquest:(NSURLRequest *)request queue:(NSOperationQueue *)queue completeHandler:(void(^)(NSURLRequest*, NSData *, NSError *)) handler;
+//+(void)sendAsynchronousREquest:(NSURLRequest *)request queue:(NSOperationQueue *)queue completeHandler:(void(^)(NSURLRequest*, NSData *, NSError *)) handler;
 - (IBAction)FromCurrency:(id)sender;
 - (IBAction)textFieldReturn:(id)sender;
-- (IBAction)buttonPressed:(id)sender;
 - (IBAction)textFieldBegin:(id)sender;
 - (void) readFileAction;
 

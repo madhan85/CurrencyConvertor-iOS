@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PCCurrency.h"
 
-@class PCCurrency;
+@class ExcelXMLDataObject;
 
 @interface PCXMLParser : NSObject <NSXMLParserDelegate>{
     // an ad hoc string to hold element value
@@ -20,7 +21,7 @@
 }
 
 @property (nonatomic, retain) PCCurrency *currency;
-@property (nonatomic, retain) NSMutableArray *currencies;
+@property (nonatomic, retain) NSMutableArray * currencies;
 
 - (PCXMLParser *) initXMLParser;
 
