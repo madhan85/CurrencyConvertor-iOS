@@ -316,12 +316,12 @@ static SecondViewController *instance=nil;
                 }
             }
             if (fromCurrency > 0) {
-                if (to_rate1 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
-                if (to_rate2 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
-                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
-                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
-                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
-                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+                if (to_rate1 > 0) text1.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text2.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate6)/from_rate];
             }
             break;
         case 1:
@@ -362,12 +362,12 @@ static SecondViewController *instance=nil;
                 }
             }
             if (fromCurrency > 0) {
-                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
-                if (to_rate2 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
-                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
-                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
-                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
-                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text2.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate6)/from_rate];
             }
             break;
         case 2:
@@ -408,12 +408,12 @@ static SecondViewController *instance=nil;
                 }
             }
             if (fromCurrency > 0) {
-                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
-                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
-                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
-                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
-                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
-                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text3.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate6)/from_rate];
             }
             break;
         case 3:
@@ -454,12 +454,12 @@ static SecondViewController *instance=nil;
                 }
             }
             if (fromCurrency > 0) {
-                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
-                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
-                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
-                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
-                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
-                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text4.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate6)/from_rate];
             }
             break;
         case 4:
@@ -500,12 +500,12 @@ static SecondViewController *instance=nil;
                 }
             }
             if (fromCurrency > 0) {
-                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
-                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
-                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
-                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
-                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
-                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text5.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate6)/from_rate];
             }
             break;
         case 5:
@@ -546,12 +546,12 @@ static SecondViewController *instance=nil;
                 }
             }
             if (fromCurrency > 0) {
-                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
-                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
-                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
-                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
-                if (to_rate5 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
-                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text4.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text6.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate6)/from_rate];
             }
             break;
         case 6:
@@ -592,12 +592,12 @@ static SecondViewController *instance=nil;
                 }
             }
             if (fromCurrency > 0) {
-                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate1)/from_rate];
-                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate2)/from_rate];
-                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate3)/from_rate];
-                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate4)/from_rate];
-                if (to_rate5 > 0) text4.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate5)/from_rate];
-                if (to_rate6 > 0) text5.text = [NSString stringWithFormat:@"%f", (fromCurrency*to_rate6)/from_rate];
+                if (to_rate1 > 0) text0.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate1)/from_rate];
+                if (to_rate2 > 0) text1.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate2)/from_rate];
+                if (to_rate3 > 0) text2.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate3)/from_rate];
+                if (to_rate4 > 0) text3.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate4)/from_rate];
+                if (to_rate5 > 0) text4.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate5)/from_rate];
+                if (to_rate6 > 0) text5.text = [NSString stringWithFormat:@"%.02f", (fromCurrency*to_rate6)/from_rate];
             }
             break;
         default:

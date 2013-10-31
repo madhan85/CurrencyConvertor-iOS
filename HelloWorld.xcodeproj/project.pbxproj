@@ -80,7 +80,7 @@
 /* Begin PBXFileReference section */
 		CD048E2E1610AEBF0012A556 /* MyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppDelegate.h; sourceTree = "<group>"; };
 		CD048E2F1610AEBF0012A556 /* MyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppDelegate.m; sourceTree = "<group>"; };
-		CD0F61D515B7A9A6008E3E2B /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0F61D515B7A9A6008E3E2B /* International Currency Convertor - Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "International Currency Convertor - Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0F61D915B7A9A6008E3E2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CD0F61DB15B7A9A6008E3E2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD0F61DD15B7A9A6008E3E2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,7 +191,7 @@
 		CD0F61D615B7A9A6008E3E2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD0F61D515B7A9A6008E3E2B /* HelloWorld.app */,
+				CD0F61D515B7A9A6008E3E2B /* International Currency Convertor - Free.app */,
 				CD0F61F615B7A9A7008E3E2B /* HelloWorldTests.octest */,
 			);
 			name = Products;
@@ -314,7 +314,7 @@
 			);
 			name = HelloWorld;
 			productName = HelloWorld;
-			productReference = CD0F61D515B7A9A6008E3E2B /* HelloWorld.app */;
+			productReference = CD0F61D515B7A9A6008E3E2B /* International Currency Convertor - Free.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CD0F61F515B7A9A7008E3E2B /* HelloWorldTests */ = {
@@ -344,6 +344,11 @@
 			attributes = {
 				CLASSPREFIX = PC;
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					CD0F61D415B7A9A6008E3E2B = {
+						DevelopmentTeam = 6AZT664S6M;
+					};
+				};
 			};
 			buildConfigurationList = CD0F61CF15B7A9A6008E3E2B /* Build configuration list for PBXProject "HelloWorld" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -521,12 +526,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "International Currency Convertor - Free";
-				PROVISIONING_PROFILE = "E309784A-79A9-454E-B76C-F797DA0DB2F2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E309784A-79A9-454E-B76C-F797DA0DB2F2";
+				PROVISIONING_PROFILE = "56D17738-461E-4D0F-9B9E-98D9DB126640";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "56D17738-461E-4D0F-9B9E-98D9DB126640";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 			};
 			name = Debug;
@@ -545,13 +551,14 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "International Currency Convertor - Free";
-				PROVISIONING_PROFILE = "E309784A-79A9-454E-B76C-F797DA0DB2F2";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E309784A-79A9-454E-B76C-F797DA0DB2F2";
+				PROVISIONING_PROFILE = "56D17738-461E-4D0F-9B9E-98D9DB126640";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "56D17738-461E-4D0F-9B9E-98D9DB126640";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
 			};
@@ -561,12 +568,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "International Currency Convertor - Free";
+				PROVISIONING_PROFILE = "56D17738-461E-4D0F-9B9E-98D9DB126640";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -575,12 +586,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "International Currency Convertor - Free";
+				PROVISIONING_PROFILE = "56D17738-461E-4D0F-9B9E-98D9DB126640";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
