@@ -30,6 +30,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="CkU-ZR-wMf"/>
+                                    <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="gJf-Ph-HdU"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidBegin" id="Pgp-kg-cih"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="WRb-Wj-dIH"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="h83-k2-Aan"/>
@@ -53,6 +54,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="Eev-KU-WB7"/>
+                                    <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="zc8-uz-RNR"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="5rR-YF-ypY"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidBegin" id="ELb-eZ-2jb"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="P5m-dN-iVb"/>
@@ -75,6 +77,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="bI6-T0-PcU"/>
+                                    <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="xkF-Cj-3ea"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="7VY-9A-WZD"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="DzZ-qh-Mlr"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidBegin" id="g8x-Qy-zUx"/>
@@ -87,6 +90,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="h9Y-gr-8Ob"/>
+                                    <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="NEk-Qi-hSd"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="VFS-vz-smj"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidBegin" id="jIc-ju-o22"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="ofg-2z-YYf"/>
@@ -110,6 +114,7 @@
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="MQJ-nH-bgZ"/>
                                     <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="W9q-Kz-LpW"/>
+                                    <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="50q-xv-1Jy"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="SVA-zm-2Qy"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="skM-7u-DKu"/>
                                 </connections>
@@ -132,6 +137,7 @@
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="9PK-xD-TQs"/>
                                     <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="zqh-cS-mEQ"/>
+                                    <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="Ns2-GE-GOc"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="IyS-Zt-aSc"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="rOL-DS-crJ"/>
                                 </connections>
@@ -154,6 +160,7 @@
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="NaZ-fP-Xig"/>
                                     <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="MmW-kD-t0m"/>
+                                    <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="gqJ-Kz-iRf"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="xp0-yx-8fw"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="yXa-q7-hIR"/>
                                 </connections>

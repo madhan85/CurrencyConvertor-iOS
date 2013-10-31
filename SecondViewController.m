@@ -609,7 +609,7 @@ static SecondViewController *instance=nil;
     frame.origin.y = origin_y;
     [self.view setFrame:frame];
     [UIView commitAnimations];
-    [sender resignFirstResponder];
+    //[sender resignFirstResponder];
 }
 
 - (void) doParse:(NSData *)data {
@@ -702,5 +702,12 @@ static SecondViewController *instance=nil;
         [UIView commitAnimations];
         self.bannerIsVisible = NO;
     }
+}
+
+- (IBAction)textFieldEditChanged:(id)sender
+{
+    NSString *text = [NSString stringWithFormat:@"Hello %@", ((UITextField *)sender).text];
+    NSLog(@"%d %@", textSelected, text);
+    [self textFieldReturn:sender];
 }
 @end

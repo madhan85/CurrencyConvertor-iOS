@@ -64,6 +64,7 @@
 +(void)hereIsSomeData:(NSString *) data;
 //+(void)sendAsynchronousREquest:(NSURLRequest *)request queue:(NSOperationQueue *)queue completeHandler:(void(^)(NSURLRequest*, NSData *, NSError *)) handler;
 - (IBAction)FromCurrency:(id)sender;
+- (IBAction)textFieldEditChanged:(id)sender;
 - (IBAction)textFieldReturn:(id)sender;
 - (IBAction)textFieldBegin:(id)sender;
 - (void) readFileAction;
