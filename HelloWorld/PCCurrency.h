@@ -17,4 +17,7 @@
 @property (nonatomic, retain) NSString *currency;
 @property (nonatomic, retain) NSString *rate;
 
+-(NSString *) getCountryImage:(NSString *)name;
+-(NSString *) concantenateFileName:(NSString *)name;
+
 @end

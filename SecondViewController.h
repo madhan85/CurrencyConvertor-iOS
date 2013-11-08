@@ -15,58 +15,28 @@
     ADBannerView    *adView;
     BOOL bannerIsVisible;
     
-    NSMutableString *currency;
     UITextField     *from;
-    int             fromCurrency;
+    float           fromCurrency;
     NSMutableArray  *currencies;
-    UIButton        *btn0;
-    UIButton        *btn1;
-    UIButton        *btn2;
-    UIButton        *btn3;
-    UIButton        *btn4;
-    UIButton        *btn5;
-    UIButton        *btn6;
-    NSString        *currency0;
-    NSString        *currency1;
-    NSString        *currency2;
-    NSString        *currency3;
-    NSString        *currency4;
-    NSString        *currency5;
-    NSString        *currency6;
     
     NSString        *SelectedCurrency;
+    
     int             textSelected;
     int             origin_y;
 }
 
-@property (nonatomic,assign) BOOL bannerIsVisible;
-
-@property (strong, nonatomic) IBOutlet UITextField *text1;
-@property (strong, nonatomic) IBOutlet UITextField *text2;
-@property (strong, nonatomic) IBOutlet UITextField *text3;
-@property (strong, nonatomic) IBOutlet UITextField *text4;
-@property (strong, nonatomic) IBOutlet UITextField *text5;
-@property (strong, nonatomic) IBOutlet UITextField *text6;
-@property (strong, nonatomic) IBOutlet UITextField *text0;
+@property (strong, nonatomic) NSString *SelectedCurrency;
+@property (nonatomic, assign) BOOL bannerIsVisible;
 @property (nonatomic, retain) NSMutableArray *currencies;
-@property (strong, nonatomic) IBOutlet UIButton *btn0;
-@property (strong, nonatomic) IBOutlet UIButton *btn1;
-@property (strong, nonatomic) IBOutlet UIButton *btn2;
-@property (strong, nonatomic) IBOutlet UIButton *btn3;
-@property (strong, nonatomic) IBOutlet UIButton *btn4;
-@property (strong, nonatomic) IBOutlet UIButton *btn5;
-@property (strong, nonatomic) IBOutlet UIButton *btn6;
+@property (nonatomic, retain) IBOutlet ADBannerView *adView;
 
 +(SecondViewController *)getInstance;
--(void)viewWillAppear:(BOOL)animated;
--(NSString *)getCountryImage:(NSString *)name;
--(void)getCurrencyAsync;
 +(void)hereIsSomeData:(NSString *) data;
-//+(void)sendAsynchronousREquest:(NSURLRequest *)request queue:(NSOperationQueue *)queue completeHandler:(void(^)(NSURLRequest*, NSData *, NSError *)) handler;
+
 - (IBAction)FromCurrency:(id)sender;
 - (IBAction)textFieldEditChanged:(id)sender;
 - (IBAction)textFieldReturn:(id)sender;
 - (IBAction)textFieldBegin:(id)sender;
-- (void) readFileAction;
 
+- (void) setCurrencies:(NSMutableArray *)_currencies;
 @end

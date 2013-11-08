@@ -1,4 +1,4 @@
-//
+        //
 //  PCCurrencyTableViewController.m
 //  HelloWorld
 //
@@ -34,14 +34,11 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    if (![self.navigationController.viewControllers containsObject:self]) {
-        
-    }
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
-    if (cell != nil) {
-        textLabel = cell.textLabel.text;
-        [[PCAppDelegate sharedAppDelegate] passData:textLabel];
-    }
+//    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
+//    if (cell != nil) {
+//        textLabel = cell.textLabel.text;
+//        [[PCAppDelegate sharedAppDelegate] passData:textLabel];
+//    }
     [super viewWillDisappear:animated];
 }
 
@@ -53,15 +50,9 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     myData = [[NSArray alloc] initWithObjects:
               @"USA" , @"Japan", @"Bulgarian", @"Czech", @"Danish", @"United Kingdom", @"Hungarian", @"Lithuanian", @"Latvian", @"Polish", @"New Romanian", @"Swedish", @"Swiss", @"Norwegian", @"Croatian", @"Russian", @"Turkish", @"Australian", @"Brasilian", @"Canadian", @"Chinese", @"HongKong" , @"Indonesian" , @"Israeli", @"Indian", @"South Korean", @"Mexican", @"Malaysian", @"New Zealand", @"Philippine", @"Singapore", @"Thailand", @"South African", @"Icelandic", nil];
-
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     //self.editing = NO;
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (IBAction)pressButton1:(id)sender {
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
-    textLabel = cell.textLabel.text;
 }
 
 - (void)viewDidUnload
@@ -89,7 +80,12 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [myData count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+    } else {
+        return [myData count];
+    }
+    //NSLog(@"%d", [myData count]);
     //return 0;
 }
 
@@ -102,7 +98,12 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    cell.textLabel.text = (NSString*)[myData objectAtIndex:indexPath.row];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+       cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        cell.textLabel.text = (NSString*)[myData objectAtIndex:indexPath.row];
+    }
+    
     return cell;
 }
 
@@ -157,6 +158,49 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        [self performSegueWithIdentifier: @"setCountryCurrency" sender: self];
+    } else {
+        [self performSegueWithIdentifier: @"setCountryCurrency" sender: self];
+    }
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"setCountryCurrency"]) {
+        SecondViewController *destViewController = [SecondViewController getInstance];
+        //segue.destinationViewController;
+        
+        NSIndexPath *indexPath = nil;
+        
+        if ([self.searchDisplayController isActive]) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            destViewController.SelectedCurrency = [searchResults objectAtIndex:indexPath.row];
+            
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            destViewController.SelectedCurrency = [myData objectAtIndex:indexPath.row];
+        }
+    }
+    
+}
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF contains[cd] %@",
+                                    searchText];
+    
+    searchResults = [[myData filteredArrayUsingPredicate:resultPredicate] retain];
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller
+shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
 @end

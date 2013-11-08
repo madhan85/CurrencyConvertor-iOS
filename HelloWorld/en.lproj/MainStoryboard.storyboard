@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="ztL-xc-gah" customClass="SecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NT9-F9-A71">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="08d-el-zYT" userLabel="FromCurrency">
@@ -23,17 +23,24 @@
                                     <segue destination="qa6-Es-Wbn" kind="push" id="4lZ-0x-JcE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="M0k-L6-KyN">
-                                <rect key="frame" x="126" y="84" width="174" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="M0k-L6-KyN" userLabel="Text1">
+                                <rect key="frame" x="126" y="85" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="text1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <attributedString key="userComments">
+                                    <fragment content="text1">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="toolTip"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="CkU-ZR-wMf"/>
                                     <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="gJf-Ph-HdU"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidBegin" id="Pgp-kg-cih"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="WRb-Wj-dIH"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="h83-k2-Aan"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UPl-G2-mF9" userLabel="ToCurrency1">
@@ -47,17 +54,24 @@
                                     <segue destination="qa6-Es-Wbn" kind="push" id="DpW-i8-7Cy"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Yvj-Gx-5Sx">
-                                <rect key="frame" x="126" y="128" width="174" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Yvj-Gx-5Sx" userLabel="Text2">
+                                <rect key="frame" x="126" y="128" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="text2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <attributedString key="userComments">
+                                    <fragment content="text2">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="toolTip"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="Eev-KU-WB7"/>
                                     <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="zc8-uz-RNR"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="5rR-YF-ypY"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidBegin" id="ELb-eZ-2jb"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="P5m-dN-iVb"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FVK-d2-kSn">
@@ -70,30 +84,44 @@
                                     <segue destination="qa6-Es-Wbn" kind="push" id="2PV-Ur-qvN"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="HuK-BC-fTB">
-                                <rect key="frame" x="126" y="174" width="174" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="HuK-BC-fTB" userLabel="Text3" colorLabel="IBBuiltInLabel-Purple">
+                                <rect key="frame" x="126" y="175" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="text3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <attributedString key="userComments">
+                                    <fragment content="text3">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="toolTip"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="bI6-T0-PcU"/>
                                     <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="xkF-Cj-3ea"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="7VY-9A-WZD"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="DzZ-qh-Mlr"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidBegin" id="g8x-Qy-zUx"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="nRa-YM-pEc">
-                                <rect key="frame" x="126" y="224" width="174" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="nRa-YM-pEc" userLabel="Text4">
+                                <rect key="frame" x="126" y="224" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="text4"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <attributedString key="userComments">
+                                    <fragment content="text4">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="toolTip"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="h9Y-gr-8Ob"/>
                                     <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="NEk-Qi-hSd"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="VFS-vz-smj"/>
                                     <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidBegin" id="jIc-ju-o22"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="ofg-2z-YYf"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4mz-EO-flI">
@@ -106,17 +134,24 @@
                                     <segue destination="qa6-Es-Wbn" kind="push" id="gcU-yL-hGR"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="wa4-7d-Z3h">
-                                <rect key="frame" x="126" y="272" width="174" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="wa4-7d-Z3h" userLabel="Text5">
+                                <rect key="frame" x="126" y="272" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="text5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <attributedString key="userComments">
+                                    <fragment content="text5">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="toolTip"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="MQJ-nH-bgZ"/>
                                     <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="W9q-Kz-LpW"/>
                                     <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="50q-xv-1Jy"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="SVA-zm-2Qy"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="skM-7u-DKu"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ckl-d8-HQW">
@@ -129,17 +164,24 @@
                                     <segue destination="qa6-Es-Wbn" kind="push" id="EwN-er-5pC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Rli-07-9jR">
-                                <rect key="frame" x="126" y="320" width="174" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Rli-07-9jR" userLabel="Text6">
+                                <rect key="frame" x="126" y="320" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="text6"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <attributedString key="userComments">
+                                    <fragment content="text6">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="toolTip"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="9PK-xD-TQs"/>
                                     <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="zqh-cS-mEQ"/>
                                     <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="Ns2-GE-GOc"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="IyS-Zt-aSc"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="rOL-DS-crJ"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nsU-gr-pEh">
@@ -152,48 +194,59 @@
                                     <segue destination="qa6-Es-Wbn" kind="push" id="iHU-Ja-4ds"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="VC3-yF-9xd">
-                                <rect key="frame" x="126" y="367" width="174" height="31"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="VC3-yF-9xd" userLabel="Text7">
+                                <rect key="frame" x="126" y="367" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="text7"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <attributedString key="userComments">
+                                    <fragment content="text7">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="toolTip"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <connections>
                                     <action selector="FromCurrency:" destination="ztL-xc-gah" eventType="touchDown" id="NaZ-fP-Xig"/>
                                     <action selector="textFieldBegin:" destination="ztL-xc-gah" eventType="editingDidBegin" id="MmW-kD-t0m"/>
                                     <action selector="textFieldEditChanged:" destination="ztL-xc-gah" eventType="editingChanged" id="gqJ-Kz-iRf"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEndOnExit" id="xp0-yx-8fw"/>
-                                    <action selector="textFieldReturn:" destination="ztL-xc-gah" eventType="editingDidEnd" id="yXa-q7-hIR"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dCs-JS-zqp">
                                 <rect key="frame" x="13" y="364" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="gbp.gif">
+                                <state key="normal" backgroundImage="cad.gif">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="qa6-Es-Wbn" kind="push" id="SjJ-tU-Fth"/>
                                 </connections>
                             </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="s4g-Jw-76B">
+                                <rect key="frame" x="0.0" y="430" width="320" height="138"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="5bF-eT-KgM"/>
                     <connections>
-                        <outlet property="btn0" destination="08d-el-zYT" id="DhC-nw-z26"/>
-                        <outlet property="btn1" destination="UPl-G2-mF9" id="PbO-9e-Orf"/>
-                        <outlet property="btn2" destination="FVK-d2-kSn" id="NtQ-ay-lhU"/>
-                        <outlet property="btn3" destination="4mz-EO-flI" id="FlV-Bi-QrO"/>
-                        <outlet property="btn4" destination="ckl-d8-HQW" id="Khc-0z-ewA"/>
-                        <outlet property="btn5" destination="nsU-gr-pEh" id="mmb-Kz-kFk"/>
-                        <outlet property="btn6" destination="dCs-JS-zqp" id="vbZ-uZ-QpG"/>
-                        <outlet property="text0" destination="M0k-L6-KyN" id="o41-V3-LOD"/>
-                        <outlet property="text1" destination="Yvj-Gx-5Sx" id="8IT-sA-HH6"/>
-                        <outlet property="text2" destination="HuK-BC-fTB" id="43h-PI-Q86"/>
-                        <outlet property="text3" destination="nRa-YM-pEc" id="nFZ-OQ-w81"/>
-                        <outlet property="text4" destination="wa4-7d-Z3h" id="MKf-qh-XE9"/>
-                        <outlet property="text5" destination="Rli-07-9jR" id="qRC-n7-N2v"/>
-                        <outlet property="text6" destination="VC3-yF-9xd" id="1uB-pk-pyT"/>
+                        <outletCollection property="currencyButtns" destination="08d-el-zYT" id="chd-5d-uHS"/>
+                        <outletCollection property="currencyButtns" destination="UPl-G2-mF9" id="ZlI-DJ-dHv"/>
+                        <outletCollection property="currencyButtns" destination="FVK-d2-kSn" id="Wve-1p-f1c"/>
+                        <outletCollection property="currencyButtns" destination="4mz-EO-flI" id="plW-NH-gy3"/>
+                        <outletCollection property="currencyButtns" destination="ckl-d8-HQW" id="JrA-UY-vch"/>
+                        <outletCollection property="currencyButtns" destination="nsU-gr-pEh" id="7Ah-rK-P92"/>
+                        <outletCollection property="currencyButtns" destination="dCs-JS-zqp" id="wn5-TR-9Cd"/>
+                        <outletCollection property="currencyTextFields" destination="M0k-L6-KyN" id="gPE-k1-01C"/>
+                        <outletCollection property="currencyTextFields" destination="Yvj-Gx-5Sx" id="NBU-Cg-aCu"/>
+                        <outletCollection property="currencyTextFields" destination="HuK-BC-fTB" id="Ia0-VI-t4W"/>
+                        <outletCollection property="currencyTextFields" destination="nRa-YM-pEc" id="BRz-4E-qsD"/>
+                        <outletCollection property="currencyTextFields" destination="wa4-7d-Z3h" id="V0E-uU-ApG"/>
+                        <outletCollection property="currencyTextFields" destination="Rli-07-9jR" id="rb4-Av-crd"/>
+                        <outletCollection property="currencyTextFields" destination="VC3-yF-9xd" id="Uht-9V-1ge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NzJ-XQ-q8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,12 +258,20 @@
             <objects>
                 <tableViewController id="qa6-Es-Wbn" customClass="PCCurrencyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ejW-um-YgN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="X2N-yB-00P">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="ejW-um-YgN" id="iZq-ii-xzR"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="pA1-le-2fP">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pA1-le-2fP" id="m6J-BP-utC">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -224,10 +285,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Qja-k3-aZI"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="MOW-0G-BxI" id="tSB-im-dEc"/>
+                        <segue destination="ztL-xc-gah" kind="push" identifier="setCountryCurrency" id="fjU-sK-JCk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmC-7F-hms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="MOr-kG-r99">
+                    <connections>
+                        <outlet property="delegate" destination="qa6-Es-Wbn" id="Tkp-Vr-h7L"/>
+                        <outlet property="searchContentsController" destination="qa6-Es-Wbn" id="042-Mo-kRv"/>
+                        <outlet property="searchResultsDataSource" destination="qa6-Es-Wbn" id="Pal-MY-rKf"/>
+                        <outlet property="searchResultsDelegate" destination="qa6-Es-Wbn" id="aal-Sc-2bp"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="MOW-0G-BxI">
+                    <connections>
+                        <outlet property="delegate" destination="qa6-Es-Wbn" id="YBr-q8-v6x"/>
+                        <outlet property="searchBar" destination="X2N-yB-00P" id="ODS-1F-yIV"/>
+                        <outlet property="searchContentsController" destination="qa6-Es-Wbn" id="U0Y-Wc-Uhf"/>
+                        <outlet property="searchResultsDataSource" destination="qa6-Es-Wbn" id="aZQ-pp-NBs"/>
+                        <outlet property="searchResultsDelegate" destination="qa6-Es-Wbn" id="Kqg-PC-E8j"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="618" y="-62"/>
+            <point key="canvasLocation" x="694" y="-62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M4Y-6y-z0y">
@@ -246,8 +328,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cad.gif" width="480" height="320"/>
         <image name="cny.gif" width="356" height="240"/>
-        <image name="gbp.gif" width="360" height="240"/>
         <image name="hkd.gif" width="324" height="215"/>
         <image name="jpy.gif" width="1600" height="1200"/>
         <image name="krw.gif" width="360" height="240"/>
@@ -257,9 +339,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="iHU-Ja-4ds"/>
+        <segue reference="fjU-sK-JCk"/>
     </inferredMetricsTieBreakers>
 </document>

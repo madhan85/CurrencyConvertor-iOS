@@ -55,7 +55,6 @@
 		CD2EF7FB161E970B00EAC9F3 /* zar.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD2EF7F8161E970B00EAC9F3 /* zar.gif */; };
 		CD74FE8F15BC650300DB9B6D /* hkd.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD74FE8E15BC650300DB9B6D /* hkd.gif */; };
 		CD785BBE15B99D9900416CAF /* PCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD785BBD15B99D9900416CAF /* PCViewController.m */; };
-		CD785BC115B99E5300416CAF /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD785BC015B99E5300416CAF /* ThirdViewController.m */; };
 		CD86C0B216122360007E3CDE /* gbp.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0B116122360007E3CDE /* gbp.gif */; };
 		CD86C0BC16122C18007E3CDE /* cny.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0BB16122C18007E3CDE /* cny.gif */; };
 		CD86C0BE16122C20007E3CDE /* jpy.gif in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0BD16122C20007E3CDE /* jpy.gif */; };
@@ -63,6 +62,8 @@
 		CDB8380B1623349400D0D492 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8380A1623349400D0D492 /* Icon.png */; };
 		CDB8380D1623349800D0D492 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8380C1623349800D0D492 /* Icon@2x.png */; };
 		CDCD2836160B4E2900CE9597 /* PCCurrencyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */; };
+		CDDB2947182CA242007FAA36 /* cad.gif in Resources */ = {isa = PBXBuildFile; fileRef = CDDB2946182CA242007FAA36 /* cad.gif */; };
+		CDDB294C182CD0C0007FAA36 /* CurrencyURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDB294B182CD0C0007FAA36 /* CurrencyURLParser.m */; };
 		CDDCE4DD1607518A0067D9A3 /* PCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */; };
 		CDDCE4E6160760CA0067D9A3 /* PCXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDCE4E5160760CA0067D9A3 /* PCXMLParser.m */; };
 /* End PBXBuildFile section */
@@ -143,6 +144,9 @@
 		CDB8380C1623349800D0D492 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		CDCD2834160B4E2900CE9597 /* PCCurrencyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCurrencyTableViewController.h; sourceTree = "<group>"; };
 		CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCurrencyTableViewController.m; sourceTree = "<group>"; };
+		CDDB2946182CA242007FAA36 /* cad.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cad.gif; sourceTree = "<group>"; };
+		CDDB294A182CD0C0007FAA36 /* CurrencyURLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyURLParser.h; sourceTree = "<group>"; };
+		CDDB294B182CD0C0007FAA36 /* CurrencyURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyURLParser.m; sourceTree = "<group>"; };
 		CDDCE4DB1607518A0067D9A3 /* PCCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCurrency.h; sourceTree = "<group>"; };
 		CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCurrency.m; sourceTree = "<group>"; };
 		CDDCE4E4160760CA0067D9A3 /* PCXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCXMLParser.h; sourceTree = "<group>"; };
@@ -155,9 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD2EF7B8161E8E6600EAC9F3 /* iAd.framework in Frameworks */,
+				CD0F61DE15B7A9A6008E3E2B /* CoreGraphics.framework in Frameworks */,
 				CD0F61DA15B7A9A6008E3E2B /* UIKit.framework in Frameworks */,
 				CD0F61DC15B7A9A6008E3E2B /* Foundation.framework in Frameworks */,
-				CD0F61DE15B7A9A6008E3E2B /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,58 +215,18 @@
 		CD0F61DF15B7A9A6008E3E2B /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				CD2EF7BA161E96D000EAC9F3 /* aud.gif */,
-				CD2EF7BC161E96D000EAC9F3 /* brl.jpg */,
-				CD2EF7BD161E96D000EAC9F3 /* cad.jpg */,
-				CD2EF7BE161E96D000EAC9F3 /* chf.gif */,
-				CD86C0BB16122C18007E3CDE /* cny.gif */,
-				CD2EF7C0161E96D100EAC9F3 /* czk.gif */,
-				CD2EF7C1161E96D100EAC9F3 /* dkk.gif */,
-				CD86C0B116122360007E3CDE /* gbp.gif */,
-				CD74FE8E15BC650300DB9B6D /* hkd.gif */,
-				CD2EF7BB161E96D000EAC9F3 /* bgn.gif */,
-				CD2EF7CB161E96E400EAC9F3 /* hrk.jpg */,
-				CD2EF7CC161E96E400EAC9F3 /* huf.gif */,
-				CD2EF7CD161E96E400EAC9F3 /* idr.gif */,
-				CD2EF7CE161E96E400EAC9F3 /* ils.gif */,
-				CD2EF7CF161E96E400EAC9F3 /* inr.gif */,
-				CD2EF7D0161E96E400EAC9F3 /* isk.gif */,
-				CD86C0BD16122C20007E3CDE /* jpy.gif */,
-				CD2EF7D2161E96E400EAC9F3 /* krw.gif */,
-				CD2EF7D3161E96E400EAC9F3 /* ltl.gif */,
-				CD2EF7D4161E96E400EAC9F3 /* lvl.gif */,
 				CD0F61EB15B7A9A6008E3E2B /* MainStoryboard.storyboard */,
-				CD2EF7E0161E96EC00EAC9F3 /* msn.gif */,
-				CD048E2E1610AEBF0012A556 /* MyAppDelegate.h */,
-				CD048E2F1610AEBF0012A556 /* MyAppDelegate.m */,
-				CD2EF7E2161E96F500EAC9F3 /* myr.gif */,
-				CD2EF7E3161E96F500EAC9F3 /* nok.gif */,
-				CD2EF7E4161E96F500EAC9F3 /* nzd.gif */,
-				CD0F61E815B7A9A6008E3E2B /* PCAppDelegate.h */,
-				CD0F61E915B7A9A6008E3E2B /* PCAppDelegate.m */,
-				CDDCE4DB1607518A0067D9A3 /* PCCurrency.h */,
-				CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */,
 				CDCD2834160B4E2900CE9597 /* PCCurrencyTableViewController.h */,
 				CDCD2835160B4E2900CE9597 /* PCCurrencyTableViewController.m */,
 				CD785BBC15B99D9900416CAF /* PCViewController.h */,
 				CD785BBD15B99D9900416CAF /* PCViewController.m */,
-				CDDCE4E4160760CA0067D9A3 /* PCXMLParser.h */,
-				CDDCE4E5160760CA0067D9A3 /* PCXMLParser.m */,
-				CD2EF7E8161E970200EAC9F3 /* php.gif */,
-				CD2EF7E9161E970200EAC9F3 /* pln.gif */,
-				CD2EF7EA161E970200EAC9F3 /* ron.gif */,
-				CD2EF7EB161E970200EAC9F3 /* rub.gif */,
 				CD0F620E15B7B08E008E3E2B /* SecondViewController.h */,
 				CD0F620F15B7B08E008E3E2B /* SecondViewController.m */,
-				CD2EF7EC161E970200EAC9F3 /* sek.jpg */,
-				CD2EF7ED161E970200EAC9F3 /* sgd.gif */,
-				CD0F61E015B7A9A6008E3E2B /* Supporting Files */,
-				CD2EF7EE161E970200EAC9F3 /* thb.gif */,
 				CD785BBF15B99E5300416CAF /* ThirdViewController.h */,
 				CD785BC015B99E5300416CAF /* ThirdViewController.m */,
-				CD2EF7F6161E970B00EAC9F3 /* try.gif */,
-				CD2EF7F7161E970B00EAC9F3 /* usd.gif */,
-				CD2EF7F8161E970B00EAC9F3 /* zar.gif */,
+				CD7FF862182AA54C00E50F39 /* Images */,
+				CD7FF861182AA52400E50F39 /* Model */,
+				CD0F61E015B7A9A6008E3E2B /* Supporting Files */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -270,6 +234,10 @@
 		CD0F61E015B7A9A6008E3E2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD048E2E1610AEBF0012A556 /* MyAppDelegate.h */,
+				CD048E2F1610AEBF0012A556 /* MyAppDelegate.m */,
+				CD0F61E815B7A9A6008E3E2B /* PCAppDelegate.h */,
+				CD0F61E915B7A9A6008E3E2B /* PCAppDelegate.m */,
 				CD0F61E115B7A9A6008E3E2B /* HelloWorld-Info.plist */,
 				CD0F61E215B7A9A6008E3E2B /* InfoPlist.strings */,
 				CD0F61E515B7A9A6008E3E2B /* main.m */,
@@ -295,6 +263,61 @@
 				CD0F620015B7A9A7008E3E2B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD7FF861182AA52400E50F39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDDCE4E4160760CA0067D9A3 /* PCXMLParser.h */,
+				CDDCE4E5160760CA0067D9A3 /* PCXMLParser.m */,
+				CDDCE4DB1607518A0067D9A3 /* PCCurrency.h */,
+				CDDCE4DC1607518A0067D9A3 /* PCCurrency.m */,
+				CDDB294A182CD0C0007FAA36 /* CurrencyURLParser.h */,
+				CDDB294B182CD0C0007FAA36 /* CurrencyURLParser.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CD7FF862182AA54C00E50F39 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CD2EF7F6161E970B00EAC9F3 /* try.gif */,
+				CD2EF7F7161E970B00EAC9F3 /* usd.gif */,
+				CD2EF7F8161E970B00EAC9F3 /* zar.gif */,
+				CD2EF7EE161E970200EAC9F3 /* thb.gif */,
+				CD2EF7EC161E970200EAC9F3 /* sek.jpg */,
+				CD2EF7ED161E970200EAC9F3 /* sgd.gif */,
+				CD2EF7E2161E96F500EAC9F3 /* myr.gif */,
+				CD2EF7E3161E96F500EAC9F3 /* nok.gif */,
+				CD2EF7E4161E96F500EAC9F3 /* nzd.gif */,
+				CD2EF7E8161E970200EAC9F3 /* php.gif */,
+				CD2EF7E9161E970200EAC9F3 /* pln.gif */,
+				CD2EF7EA161E970200EAC9F3 /* ron.gif */,
+				CDDB2946182CA242007FAA36 /* cad.gif */,
+				CD2EF7EB161E970200EAC9F3 /* rub.gif */,
+				CD2EF7E0161E96EC00EAC9F3 /* msn.gif */,
+				CD2EF7BA161E96D000EAC9F3 /* aud.gif */,
+				CD2EF7BC161E96D000EAC9F3 /* brl.jpg */,
+				CD2EF7BD161E96D000EAC9F3 /* cad.jpg */,
+				CD2EF7BE161E96D000EAC9F3 /* chf.gif */,
+				CD86C0BB16122C18007E3CDE /* cny.gif */,
+				CD2EF7C0161E96D100EAC9F3 /* czk.gif */,
+				CD2EF7C1161E96D100EAC9F3 /* dkk.gif */,
+				CD86C0B116122360007E3CDE /* gbp.gif */,
+				CD74FE8E15BC650300DB9B6D /* hkd.gif */,
+				CD2EF7BB161E96D000EAC9F3 /* bgn.gif */,
+				CD2EF7CB161E96E400EAC9F3 /* hrk.jpg */,
+				CD2EF7CC161E96E400EAC9F3 /* huf.gif */,
+				CD2EF7CD161E96E400EAC9F3 /* idr.gif */,
+				CD2EF7CE161E96E400EAC9F3 /* ils.gif */,
+				CD2EF7CF161E96E400EAC9F3 /* inr.gif */,
+				CD2EF7D0161E96E400EAC9F3 /* isk.gif */,
+				CD86C0BD16122C20007E3CDE /* jpy.gif */,
+				CD2EF7D2161E96E400EAC9F3 /* krw.gif */,
+				CD2EF7D3161E96E400EAC9F3 /* ltl.gif */,
+				CD2EF7D4161E96E400EAC9F3 /* lvl.gif */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +366,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PC;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					CD0F61D415B7A9A6008E3E2B = {
 						DevelopmentTeam = 6AZT664S6M;
@@ -376,6 +399,7 @@
 				CD0F61E415B7A9A6008E3E2B /* InfoPlist.strings in Resources */,
 				CD0F61ED15B7A9A6008E3E2B /* MainStoryboard.storyboard in Resources */,
 				CD74FE8F15BC650300DB9B6D /* hkd.gif in Resources */,
+				CDDB2947182CA242007FAA36 /* cad.gif in Resources */,
 				CD86C0B216122360007E3CDE /* gbp.gif in Resources */,
 				CD86C0BC16122C18007E3CDE /* cny.gif in Resources */,
 				CD86C0BE16122C20007E3CDE /* jpy.gif in Resources */,
@@ -450,9 +474,9 @@
 				CD0F61EA15B7A9A6008E3E2B /* PCAppDelegate.m in Sources */,
 				CD0F621015B7B08E008E3E2B /* SecondViewController.m in Sources */,
 				CD785BBE15B99D9900416CAF /* PCViewController.m in Sources */,
-				CD785BC115B99E5300416CAF /* ThirdViewController.m in Sources */,
 				CDDCE4DD1607518A0067D9A3 /* PCCurrency.m in Sources */,
 				CDDCE4E6160760CA0067D9A3 /* PCXMLParser.m in Sources */,
+				CDDB294C182CD0C0007FAA36 /* CurrencyURLParser.m in Sources */,
 				CDCD2836160B4E2900CE9597 /* PCCurrencyTableViewController.m in Sources */,
 				CD048E301610AEBF0012A556 /* MyAppDelegate.m in Sources */,
 			);
@@ -509,8 +533,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ka Fai Cheung";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ka Fai Cheung";
 				COPY_PHASE_STRIP = NO;
@@ -523,10 +552,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "International Currency Convertor - Free";
 				PROVISIONING_PROFILE = "56D17738-461E-4D0F-9B9E-98D9DB126640";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "56D17738-461E-4D0F-9B9E-98D9DB126640";
@@ -541,17 +574,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ka Fai Cheung";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ka Fai Cheung";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "International Currency Convertor - Free";
 				PROVISIONING_PROFILE = "56D17738-461E-4D0F-9B9E-98D9DB126640";
